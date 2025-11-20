@@ -1,38 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\samue\\source\\repos\\Book-Store-Interface1\\",
+  "WorkspaceRootPath": "C:\\Users\\ashto\\source\\repos\\Book-Store-Interface\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|c:\\users\\samue\\source\\repos\\book-store-interface1\\searchbookform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|solutionrelative:searchbookform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|c:\\users\\ashto\\source\\repos\\book-store-interface\\borrowbookform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|solutionrelative:borrowbookform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|c:\\users\\samue\\source\\repos\\book-store-interface1\\returnbookform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|solutionrelative:returnbookform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|c:\\users\\ashto\\source\\repos\\book-store-interface\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|c:\\users\\samue\\source\\repos\\book-store-interface1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|c:\\users\\samue\\source\\repos\\book-store-interface1\\mainmenuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|solutionrelative:mainmenuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|c:\\users\\samue\\source\\repos\\book-store-interface1\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|c:\\users\\samue\\source\\repos\\book-store-interface1\\borrowbookform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|c:\\users\\ashto\\source\\repos\\book-store-interface\\borrowbookform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|solutionrelative:borrowbookform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|c:\\users\\samue\\source\\repos\\book-store-interface1\\addbookform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|solutionrelative:addbookform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|c:\\users\\ashto\\source\\repos\\book-store-interface\\returnbookform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|solutionrelative:returnbookform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|c:\\users\\samue\\source\\repos\\book-store-interface1\\addbookform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|solutionrelative:addbookform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|c:\\users\\ashto\\source\\repos\\book-store-interface\\searchbookform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{351B3317-60BB-46AD-899A-4C02567434D4}|Book-Store-Interface.csproj|solutionrelative:searchbookform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,8 +30,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -58,107 +50,64 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SearchBookForm.cs",
-              "DocumentMoniker": "C:\\Users\\samue\\source\\repos\\Book-Store-Interface1\\SearchBookForm.cs",
-              "RelativeDocumentMoniker": "SearchBookForm.cs",
-              "ToolTip": "C:\\Users\\samue\\source\\repos\\Book-Store-Interface1\\SearchBookForm.cs",
-              "RelativeToolTip": "SearchBookForm.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwAgAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T12:54:00.302Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ReturnBookForm.cs",
-              "DocumentMoniker": "C:\\Users\\samue\\source\\repos\\Book-Store-Interface1\\ReturnBookForm.cs",
-              "RelativeDocumentMoniker": "ReturnBookForm.cs",
-              "ToolTip": "C:\\Users\\samue\\source\\repos\\Book-Store-Interface1\\ReturnBookForm.cs",
-              "RelativeToolTip": "ReturnBookForm.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAA8wHoAAAAAAAAAAAAAAA==",
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ashto\\source\\repos\\Book-Store-Interface\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "C:\\Users\\ashto\\source\\repos\\Book-Store-Interface\\LoginForm.cs [Design]",
+              "RelativeToolTip": "LoginForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T12:53:12.329Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\samue\\source\\repos\\Book-Store-Interface1\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\samue\\source\\repos\\Book-Store-Interface1\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAcwBAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T12:52:31.888Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainMenuForm.cs",
-              "DocumentMoniker": "C:\\Users\\samue\\source\\repos\\Book-Store-Interface1\\MainMenuForm.cs",
-              "RelativeDocumentMoniker": "MainMenuForm.cs",
-              "ToolTip": "C:\\Users\\samue\\source\\repos\\Book-Store-Interface1\\MainMenuForm.cs",
-              "RelativeToolTip": "MainMenuForm.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAuwHsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T12:51:57.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-20T21:26:34.739Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "LoginForm.cs",
-              "DocumentMoniker": "C:\\Users\\samue\\source\\repos\\Book-Store-Interface1\\LoginForm.cs",
-              "RelativeDocumentMoniker": "LoginForm.cs",
-              "ToolTip": "C:\\Users\\samue\\source\\repos\\Book-Store-Interface1\\LoginForm.cs",
-              "RelativeToolTip": "LoginForm.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAuwGcAAAAAAAAAAAAAAA==",
+              "Title": "SearchBookForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ashto\\source\\repos\\Book-Store-Interface\\SearchBookForm.cs",
+              "RelativeDocumentMoniker": "SearchBookForm.cs",
+              "ToolTip": "C:\\Users\\ashto\\source\\repos\\Book-Store-Interface\\SearchBookForm.cs [Design]",
+              "RelativeToolTip": "SearchBookForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T12:51:10.766Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-20T21:23:41.901Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
+              "Title": "ReturnBookForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ashto\\source\\repos\\Book-Store-Interface\\ReturnBookForm.cs",
+              "RelativeDocumentMoniker": "ReturnBookForm.cs",
+              "ToolTip": "C:\\Users\\ashto\\source\\repos\\Book-Store-Interface\\ReturnBookForm.cs [Design]",
+              "RelativeToolTip": "ReturnBookForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:23:31.914Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "BorrowBookForm.cs",
-              "DocumentMoniker": "C:\\Users\\samue\\source\\repos\\Book-Store-Interface1\\BorrowBookForm.cs",
+              "DocumentMoniker": "C:\\Users\\ashto\\source\\repos\\Book-Store-Interface\\BorrowBookForm.cs",
               "RelativeDocumentMoniker": "BorrowBookForm.cs",
-              "ToolTip": "C:\\Users\\samue\\source\\repos\\Book-Store-Interface1\\BorrowBookForm.cs",
-              "RelativeToolTip": "BorrowBookForm.cs",
-              "ViewState": "AgIAAGcAAAAAAAAAAAA8wHwAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\ashto\\source\\repos\\Book-Store-Interface\\BorrowBookForm.cs*",
+              "RelativeToolTip": "BorrowBookForm.cs*",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAkwK0AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T12:50:29.173Z",
+              "WhenOpened": "2025-11-20T21:23:05.27Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AddBookForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\samue\\source\\repos\\Book-Store-Interface1\\AddBookForm.Designer.cs",
-              "RelativeDocumentMoniker": "AddBookForm.Designer.cs",
-              "ToolTip": "C:\\Users\\samue\\source\\repos\\Book-Store-Interface1\\AddBookForm.Designer.cs",
-              "RelativeToolTip": "AddBookForm.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "BorrowBookForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ashto\\source\\repos\\Book-Store-Interface\\BorrowBookForm.cs",
+              "RelativeDocumentMoniker": "BorrowBookForm.cs",
+              "ToolTip": "C:\\Users\\ashto\\source\\repos\\Book-Store-Interface\\BorrowBookForm.cs [Design]*",
+              "RelativeToolTip": "BorrowBookForm.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T12:48:07.93Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AddBookForm.cs",
-              "DocumentMoniker": "C:\\Users\\samue\\source\\repos\\Book-Store-Interface1\\AddBookForm.cs",
-              "RelativeDocumentMoniker": "AddBookForm.cs",
-              "ToolTip": "C:\\Users\\samue\\source\\repos\\Book-Store-Interface1\\AddBookForm.cs",
-              "RelativeToolTip": "AddBookForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T12:46:04.052Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-20T21:23:03.893Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

@@ -19,65 +19,95 @@ namespace BookStoreApp
 
         private void InitializeComponent()
         {
-            // Initialize buttons
-            this.btnSearchBook = new Button();
-            this.btnLogout = new Button();
-            this.btnBorrowBook = new Button();
-            this.btnReturnBook = new Button();
-            this.btnAddBook = new Button();
-
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenuForm));
+            this.btnSearchBook = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnBorrowBook = new System.Windows.Forms.Button();
+            this.btnReturnBook = new System.Windows.Forms.Button();
+            this.btnAddBook = new System.Windows.Forms.Button();
             this.SuspendLayout();
-
-            // Add Book Button
-            this.btnAddBook.Text = "Add Book";
-            this.btnAddBook.BackColor = System.Drawing.Color.Blue;
-            this.btnAddBook.ForeColor = System.Drawing.Color.White;
-            this.btnAddBook.Location = new System.Drawing.Point(50, 50);
-            this.btnAddBook.Size = new System.Drawing.Size(200, 40);
-            this.btnAddBook.Click += new EventHandler(this.OpenAddBookForm); // Handle Add Book button click
-            this.Controls.Add(this.btnAddBook);
-
-            // Search Book Button
-            this.btnSearchBook.Text = "Search Book";
+            // 
+            // btnSearchBook
+            // 
             this.btnSearchBook.BackColor = System.Drawing.Color.Blue;
+            this.btnSearchBook.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchBook.ForeColor = System.Drawing.Color.White;
-            this.btnSearchBook.Location = new System.Drawing.Point(50, 100);
+            this.btnSearchBook.Location = new System.Drawing.Point(42, 85);
+            this.btnSearchBook.Name = "btnSearchBook";
             this.btnSearchBook.Size = new System.Drawing.Size(200, 40);
-            this.btnSearchBook.Click += new EventHandler(this.OpenSearchBookForm); // Handle Search button click
-            this.Controls.Add(this.btnSearchBook);
-
-            // Borrow Book Button
-            this.btnBorrowBook.Text = "Borrow Book";
-            this.btnBorrowBook.BackColor = System.Drawing.Color.Blue;
-            this.btnBorrowBook.ForeColor = System.Drawing.Color.White;
-            this.btnBorrowBook.Location = new System.Drawing.Point(50, 150);
-            this.btnBorrowBook.Size = new System.Drawing.Size(200, 40);
-            this.btnBorrowBook.Click += new EventHandler(this.OpenBorrowBookForm); // Handle Borrow button click
-            this.Controls.Add(this.btnBorrowBook);
-
-            // Return Book Button
-            this.btnReturnBook.Text = "Return Book";
-            this.btnReturnBook.BackColor = System.Drawing.Color.Blue;
-            this.btnReturnBook.ForeColor = System.Drawing.Color.White;
-            this.btnReturnBook.Location = new System.Drawing.Point(50, 200);
-            this.btnReturnBook.Size = new System.Drawing.Size(200, 40);
-            this.btnReturnBook.Click += new EventHandler(this.OpenReturnBookForm); // Handle Return button click
-            this.Controls.Add(this.btnReturnBook);
-
-            // Logout Button
-            this.btnLogout.Text = "Logout";
+            this.btnSearchBook.TabIndex = 1;
+            this.btnSearchBook.Text = "Search Book";
+            this.btnSearchBook.UseVisualStyleBackColor = false;
+            this.btnSearchBook.Click += new System.EventHandler(this.OpenSearchBookForm);
+            // 
+            // btnLogout
+            // 
             this.btnLogout.BackColor = System.Drawing.Color.Blue;
+            this.btnLogout.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnLogout.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(50, 250);
+            this.btnLogout.Location = new System.Drawing.Point(42, 235);
+            this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(200, 40);
-            this.btnLogout.Click += new EventHandler(this.Logout); // Handle Logout button click
+            this.btnLogout.TabIndex = 4;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.Logout);
+            // 
+            // btnBorrowBook
+            // 
+            this.btnBorrowBook.BackColor = System.Drawing.Color.Blue;
+            this.btnBorrowBook.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrowBook.ForeColor = System.Drawing.Color.White;
+            this.btnBorrowBook.Location = new System.Drawing.Point(42, 135);
+            this.btnBorrowBook.Name = "btnBorrowBook";
+            this.btnBorrowBook.Size = new System.Drawing.Size(200, 40);
+            this.btnBorrowBook.TabIndex = 2;
+            this.btnBorrowBook.Text = "Borrow Book";
+            this.btnBorrowBook.UseVisualStyleBackColor = false;
+            this.btnBorrowBook.Click += new System.EventHandler(this.OpenBorrowBookForm);
+            // 
+            // btnReturnBook
+            // 
+            this.btnReturnBook.BackColor = System.Drawing.Color.Blue;
+            this.btnReturnBook.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturnBook.ForeColor = System.Drawing.Color.White;
+            this.btnReturnBook.Location = new System.Drawing.Point(42, 185);
+            this.btnReturnBook.Name = "btnReturnBook";
+            this.btnReturnBook.Size = new System.Drawing.Size(200, 40);
+            this.btnReturnBook.TabIndex = 3;
+            this.btnReturnBook.Text = "Return Book";
+            this.btnReturnBook.UseVisualStyleBackColor = false;
+            this.btnReturnBook.Click += new System.EventHandler(this.OpenReturnBookForm);
+            // 
+            // btnAddBook
+            // 
+            this.btnAddBook.BackColor = System.Drawing.Color.Blue;
+            this.btnAddBook.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddBook.ForeColor = System.Drawing.Color.White;
+            this.btnAddBook.Location = new System.Drawing.Point(42, 35);
+            this.btnAddBook.Name = "btnAddBook";
+            this.btnAddBook.Size = new System.Drawing.Size(200, 40);
+            this.btnAddBook.TabIndex = 0;
+            this.btnAddBook.Text = "Add Book";
+            this.btnAddBook.UseVisualStyleBackColor = false;
+            this.btnAddBook.Click += new System.EventHandler(this.OpenAddBookForm);
+            // 
+            // MainMenuForm
+            // 
+            this.AcceptButton = this.btnSearchBook;
+            this.CancelButton = this.btnLogout;
+            this.ClientSize = new System.Drawing.Size(284, 311);
+            this.Controls.Add(this.btnAddBook);
+            this.Controls.Add(this.btnSearchBook);
+            this.Controls.Add(this.btnBorrowBook);
+            this.Controls.Add(this.btnReturnBook);
             this.Controls.Add(this.btnLogout);
-
-            // Main Menu Form Properties
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "MainMenuForm";
             this.Text = "Main Menu";
-            this.Size = new System.Drawing.Size(300, 350);
-
             this.ResumeLayout(false);
+
         }
 
         // Event Handler for Add Book Button
