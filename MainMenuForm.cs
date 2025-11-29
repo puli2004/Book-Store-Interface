@@ -9,9 +9,8 @@ namespace BookStoreApp
         // Declare buttons for the Main Menu
         private Button btnSearchBook;
         private Button btnLogout;
-        private Button btnBorrowBook;
-        private Button btnReturnBook;
         private Button btnShop;
+        private Button btnAddEmployee;
         private Button btnAddBook;
 
         public MainMenuForm()
@@ -24,10 +23,9 @@ namespace BookStoreApp
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenuForm));
             this.btnSearchBook = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnBorrowBook = new System.Windows.Forms.Button();
-            this.btnReturnBook = new System.Windows.Forms.Button();
             this.btnAddBook = new System.Windows.Forms.Button();
             this.btnShop = new System.Windows.Forms.Button();
+            this.btnAddEmployee = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSearchBook
@@ -49,39 +47,13 @@ namespace BookStoreApp
             this.btnLogout.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnLogout.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(42, 235);
+            this.btnLogout.Location = new System.Drawing.Point(42, 177);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(200, 40);
             this.btnLogout.TabIndex = 4;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.Logout);
-            // 
-            // btnBorrowBook
-            // 
-            this.btnBorrowBook.BackColor = System.Drawing.Color.Blue;
-            this.btnBorrowBook.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrowBook.ForeColor = System.Drawing.Color.White;
-            this.btnBorrowBook.Location = new System.Drawing.Point(42, 135);
-            this.btnBorrowBook.Name = "btnBorrowBook";
-            this.btnBorrowBook.Size = new System.Drawing.Size(200, 40);
-            this.btnBorrowBook.TabIndex = 2;
-            this.btnBorrowBook.Text = "Borrow Book";
-            this.btnBorrowBook.UseVisualStyleBackColor = false;
-            this.btnBorrowBook.Click += new System.EventHandler(this.OpenBorrowBookForm);
-            // 
-            // btnReturnBook
-            // 
-            this.btnReturnBook.BackColor = System.Drawing.Color.Blue;
-            this.btnReturnBook.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturnBook.ForeColor = System.Drawing.Color.White;
-            this.btnReturnBook.Location = new System.Drawing.Point(42, 185);
-            this.btnReturnBook.Name = "btnReturnBook";
-            this.btnReturnBook.Size = new System.Drawing.Size(200, 40);
-            this.btnReturnBook.TabIndex = 3;
-            this.btnReturnBook.Text = "Return Book";
-            this.btnReturnBook.UseVisualStyleBackColor = false;
-            this.btnReturnBook.Click += new System.EventHandler(this.OpenReturnBookForm);
             // 
             // btnAddBook
             // 
@@ -102,7 +74,7 @@ namespace BookStoreApp
             this.btnShop.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnShop.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShop.ForeColor = System.Drawing.Color.White;
-            this.btnShop.Location = new System.Drawing.Point(42, 281);
+            this.btnShop.Location = new System.Drawing.Point(42, 223);
             this.btnShop.Name = "btnShop";
             this.btnShop.Size = new System.Drawing.Size(200, 40);
             this.btnShop.TabIndex = 5;
@@ -110,16 +82,28 @@ namespace BookStoreApp
             this.btnShop.UseVisualStyleBackColor = false;
             this.btnShop.Click += new System.EventHandler(this.btnShop_Click);
             // 
+            // btnAddEmployee
+            // 
+            this.btnAddEmployee.BackColor = System.Drawing.Color.Blue;
+            this.btnAddEmployee.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnAddEmployee.Location = new System.Drawing.Point(42, 131);
+            this.btnAddEmployee.Name = "btnAddEmployee";
+            this.btnAddEmployee.Size = new System.Drawing.Size(200, 40);
+            this.btnAddEmployee.TabIndex = 2;
+            this.btnAddEmployee.Text = "Add Employee";
+            this.btnAddEmployee.UseVisualStyleBackColor = false;
+            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
+            // 
             // MainMenuForm
             // 
             this.AcceptButton = this.btnSearchBook;
             this.CancelButton = this.btnLogout;
-            this.ClientSize = new System.Drawing.Size(284, 353);
+            this.ClientSize = new System.Drawing.Size(284, 291);
+            this.Controls.Add(this.btnAddEmployee);
             this.Controls.Add(this.btnShop);
             this.Controls.Add(this.btnAddBook);
             this.Controls.Add(this.btnSearchBook);
-            this.Controls.Add(this.btnBorrowBook);
-            this.Controls.Add(this.btnReturnBook);
             this.Controls.Add(this.btnLogout);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainMenuForm";
@@ -168,10 +152,19 @@ namespace BookStoreApp
             this.Hide(); // Hide MainMenuForm
         }
 
+        // Event Handler for Cart Button
         private void btnShop_Click(object sender, EventArgs e)
         {
             frmCart shopForm = new frmCart();
             shopForm.Show();
+            this.Hide();
+        }
+
+        // Event Handler for Add Employee Button
+        private void btnAddEmployee_Click(object sender, EventArgs e)
+        {
+            AddEmployeeForm addEmployeeForm = new AddEmployeeForm();
+            addEmployeeForm.Show();
             this.Hide();
         }
     }

@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -38,7 +39,7 @@ namespace Book_Store_Interface
                     {
                         decimal price = reader["price"] == DBNull.Value ? 0 : Convert.ToDecimal(reader["price"]);
 
-                        cboTitles.Items.Add(new
+                        cboBookTitles.Items.Add(new
                         {
                             TitleID = reader["title_id"],
                             Title = reader["title"].ToString(),
@@ -49,9 +50,9 @@ namespace Book_Store_Interface
                 }
             }
 
-            cboTitles.DisplayMember = "Display";
+            cboBookTitles.DisplayMember = "Display";
 
-            cboTitles.ValueMember = "TitleID";
+            cboBookTitles.ValueMember = "TitleID";
 
         }
 
@@ -59,28 +60,29 @@ namespace Book_Store_Interface
 
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
-            if (cboTitles.SelectedIndex == -1)
+            if (cboBookTitles.SelectedIndex == -1)
             {
                 return;
             }
 
-            dynamic selected = cboTitles.SelectedItem;
+            dynamic selected = cboBookTitles.SelectedItem;
             int quantity = (int)nudQuantity.Value;
 
             shoppingCart.Add(new ShoppingCartItem()
             {
-                TitleID = selected.TitleID,
+                TitleID = 0, // Change this from 0 or fix Shopping Cart Item as TitleID in the database shows
+                             // up at a string of letters and numbers
                 Title = selected.Title,
-                UnitPrice = selected.UnitPrice,
+                UnitPrice = selected.Price,
                 Quantity = quantity,
 
             });
-
-            updateTotal();
-
+            
+            updateTotals();
+            updateCartList();
         }
 
-        private void updateTotal()
+        private void updateTotals()
         {
             decimal subtotal = 0;
 
@@ -88,7 +90,24 @@ namespace Book_Store_Interface
             decimal tax = subtotal * 0.07m;
             decimal total = subtotal + tax;
 
-            txtTotal.Text = total.ToString("C");
+            txtbxTax.Text = tax.ToString();
+            txtbxSubTotal.Text = subtotal.ToString();
+            txtbxTotal.Text = total.ToString("C");
+        }
+
+        private void updateCartList()
+        {
+            txtCartList.Text = "";
+            foreach (var item in shoppingCart)
+            {
+                decimal totalBookPrice = item.UnitPrice * item.Quantity;
+                txtCartList.Text += ($"${item.UnitPrice:F2} - {item.Title} | Total: ${totalBookPrice:F2}");
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

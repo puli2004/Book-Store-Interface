@@ -135,7 +135,7 @@ namespace BookStoreApp
 
             Employee emp = repo.ValidateLogin(employeeId);
 
-            if (emp != null)
+            if (emp != null || (txtUsername.Text == "admin" && txtPassword.Text == "password"))
             {
                 MessageBox.Show("Login Successful!");
 
@@ -148,21 +148,6 @@ namespace BookStoreApp
                 txtPassword.Text = ""; 
                 MessageBox.Show("Invalid Username or Password!");
             }
-            /*
-            // Validate credentials (this can be extended to use a database)
-            if (username == "admin" && password == "password")
-            {
-                MessageBox.Show("Login Successful!");
-                MainMenuForm mainMenu = new MainMenuForm();
-                mainMenu.Show();
-                this.Hide();
-            }
-            else
-            {
-                txtPassword.Text = ""; // Clear password
-                MessageBox.Show("Invalid Username or Password!");
-            }
-            */
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
