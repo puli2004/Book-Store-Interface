@@ -1,14 +1,26 @@
-﻿using System;
+﻿using Book_Store_Interface.Models;
+using Book_Store_Interface.Repository;
+using System;
+using System.Configuration;
 using System.Windows.Forms;
 
 namespace BookStoreApp
 {
     public partial class LoginForm : Form
     {
+        private EmployeeRepository repo;
         public LoginForm()
         {
             InitializeComponent();
+
+            string conn = ConfigurationManager.ConnectionStrings["BookStoreDb"]?.ConnectionString;
+
+            repo = new EmployeeRepository(conn);
+
+
         }
+
+
 
         private void InitializeComponent()
         {
@@ -31,6 +43,7 @@ namespace BookStoreApp
             this.lblTitle.TabIndex = 10;
             this.lblTitle.Text = "Login";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
             // 
             // lblUsername
             // 
@@ -110,6 +123,7 @@ namespace BookStoreApp
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
             this.Text = "Login Screen";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,9 +131,24 @@ namespace BookStoreApp
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
+            string employeeId = txtUsername.Text.Trim();
 
+            Employee emp = repo.ValidateLogin(employeeId);
+
+            if (emp != null)
+            {
+                MessageBox.Show("Login Successful!");
+
+                MainMenuForm mainMenu = new MainMenuForm();
+                mainMenu.Show();
+                this.Hide();
+            }
+            else
+            {
+                txtPassword.Text = ""; 
+                MessageBox.Show("Invalid Username or Password!");
+            }
+            /*
             // Validate credentials (this can be extended to use a database)
             if (username == "admin" && password == "password")
             {
@@ -133,6 +162,7 @@ namespace BookStoreApp
                 txtPassword.Text = ""; // Clear password
                 MessageBox.Show("Invalid Username or Password!");
             }
+            */
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -147,5 +177,15 @@ namespace BookStoreApp
         private Label lblUsername;
         private Label lblPassword;
         private Button btnCancel;
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
