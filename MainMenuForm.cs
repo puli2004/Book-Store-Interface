@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Book_Store_Interface;
+using System;
 using System.Windows.Forms;
 
 namespace BookStoreApp
@@ -10,6 +11,7 @@ namespace BookStoreApp
         private Button btnLogout;
         private Button btnBorrowBook;
         private Button btnReturnBook;
+        private Button btnShop;
         private Button btnAddBook;
 
         public MainMenuForm()
@@ -25,6 +27,7 @@ namespace BookStoreApp
             this.btnBorrowBook = new System.Windows.Forms.Button();
             this.btnReturnBook = new System.Windows.Forms.Button();
             this.btnAddBook = new System.Windows.Forms.Button();
+            this.btnShop = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSearchBook
@@ -93,11 +96,26 @@ namespace BookStoreApp
             this.btnAddBook.UseVisualStyleBackColor = false;
             this.btnAddBook.Click += new System.EventHandler(this.OpenAddBookForm);
             // 
+            // btnShop
+            // 
+            this.btnShop.BackColor = System.Drawing.Color.Blue;
+            this.btnShop.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnShop.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShop.ForeColor = System.Drawing.Color.White;
+            this.btnShop.Location = new System.Drawing.Point(42, 281);
+            this.btnShop.Name = "btnShop";
+            this.btnShop.Size = new System.Drawing.Size(200, 40);
+            this.btnShop.TabIndex = 5;
+            this.btnShop.Text = "Shop";
+            this.btnShop.UseVisualStyleBackColor = false;
+            this.btnShop.Click += new System.EventHandler(this.btnShop_Click);
+            // 
             // MainMenuForm
             // 
             this.AcceptButton = this.btnSearchBook;
             this.CancelButton = this.btnLogout;
-            this.ClientSize = new System.Drawing.Size(284, 311);
+            this.ClientSize = new System.Drawing.Size(284, 353);
+            this.Controls.Add(this.btnShop);
             this.Controls.Add(this.btnAddBook);
             this.Controls.Add(this.btnSearchBook);
             this.Controls.Add(this.btnBorrowBook);
@@ -148,6 +166,13 @@ namespace BookStoreApp
             LoginForm loginForm = new LoginForm(); // Open LoginForm
             loginForm.Show();
             this.Hide(); // Hide MainMenuForm
+        }
+
+        private void btnShop_Click(object sender, EventArgs e)
+        {
+            frmCart shopForm = new frmCart();
+            shopForm.Show();
+            this.Hide();
         }
     }
 }

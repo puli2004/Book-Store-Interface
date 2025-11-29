@@ -8,7 +8,7 @@ namespace Book_Store_Interface.Models
 {
     public     class Title
     {
-        public int TitleID { get; set; }
+        public string TitleID { get; set; }
         public string TitleName { get; set; }
         public int AuthorID { get; set; }
         public int PublisherID { get; set; }

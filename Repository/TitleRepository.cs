@@ -36,7 +36,7 @@ public class TitleRepository
             {
                 titles.Add(new Title
                 {
-                    TitleID = Convert.ToInt32(reader["TitleID"]),
+                    TitleID = Convert.ToString(reader["TitleID"]),
                     TitleName = reader["TitleName"].ToString(),
                     AuthorID = Convert.ToInt32(reader["AuthorID"]),
                     PublisherID = Convert.ToInt32(reader["PublisherID"]),
@@ -76,7 +76,7 @@ public class TitleRepository
             {
                 title = new Title
                 {
-                    TitleID = Convert.ToInt32(reader["TitleID"]),
+                    TitleID = Convert.ToString(reader["TitleID"]),
                     TitleName = reader["TitleName"].ToString(),
                     AuthorID = Convert.ToInt32(reader["AuthorID"]),
                     PublisherID = Convert.ToInt32(reader["PublisherID"]),
