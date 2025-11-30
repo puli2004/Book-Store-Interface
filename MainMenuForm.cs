@@ -11,6 +11,7 @@ namespace BookStoreApp
         private Button btnLogout;
         private Button btnShop;
         private Button btnAddEmployee;
+        private Button btnGeneratePurchaseReport;
         private Button btnAddBook;
 
         public MainMenuForm()
@@ -26,6 +27,7 @@ namespace BookStoreApp
             this.btnAddBook = new System.Windows.Forms.Button();
             this.btnShop = new System.Windows.Forms.Button();
             this.btnAddEmployee = new System.Windows.Forms.Button();
+            this.btnGeneratePurchaseReport = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSearchBook
@@ -47,10 +49,10 @@ namespace BookStoreApp
             this.btnLogout.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnLogout.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(42, 177);
+            this.btnLogout.Location = new System.Drawing.Point(42, 269);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(200, 40);
-            this.btnLogout.TabIndex = 4;
+            this.btnLogout.TabIndex = 5;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.Logout);
@@ -60,7 +62,7 @@ namespace BookStoreApp
             this.btnAddBook.BackColor = System.Drawing.Color.Blue;
             this.btnAddBook.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddBook.ForeColor = System.Drawing.Color.White;
-            this.btnAddBook.Location = new System.Drawing.Point(42, 35);
+            this.btnAddBook.Location = new System.Drawing.Point(42, 39);
             this.btnAddBook.Name = "btnAddBook";
             this.btnAddBook.Size = new System.Drawing.Size(200, 40);
             this.btnAddBook.TabIndex = 0;
@@ -71,13 +73,12 @@ namespace BookStoreApp
             // btnShop
             // 
             this.btnShop.BackColor = System.Drawing.Color.Blue;
-            this.btnShop.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnShop.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShop.ForeColor = System.Drawing.Color.White;
-            this.btnShop.Location = new System.Drawing.Point(42, 223);
+            this.btnShop.Location = new System.Drawing.Point(42, 177);
             this.btnShop.Name = "btnShop";
             this.btnShop.Size = new System.Drawing.Size(200, 40);
-            this.btnShop.TabIndex = 5;
+            this.btnShop.TabIndex = 3;
             this.btnShop.Text = "Shop";
             this.btnShop.UseVisualStyleBackColor = false;
             this.btnShop.Click += new System.EventHandler(this.btnShop_Click);
@@ -95,11 +96,25 @@ namespace BookStoreApp
             this.btnAddEmployee.UseVisualStyleBackColor = false;
             this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             // 
+            // btnGeneratePurchaseReport
+            // 
+            this.btnGeneratePurchaseReport.BackColor = System.Drawing.Color.Blue;
+            this.btnGeneratePurchaseReport.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGeneratePurchaseReport.ForeColor = System.Drawing.Color.White;
+            this.btnGeneratePurchaseReport.Location = new System.Drawing.Point(42, 223);
+            this.btnGeneratePurchaseReport.Name = "btnGeneratePurchaseReport";
+            this.btnGeneratePurchaseReport.Size = new System.Drawing.Size(200, 40);
+            this.btnGeneratePurchaseReport.TabIndex = 4;
+            this.btnGeneratePurchaseReport.Text = "Generate Purchase Report";
+            this.btnGeneratePurchaseReport.UseVisualStyleBackColor = false;
+            this.btnGeneratePurchaseReport.Click += new System.EventHandler(this.btnGeneratePurchaseReport_Click);
+            // 
             // MainMenuForm
             // 
             this.AcceptButton = this.btnSearchBook;
             this.CancelButton = this.btnLogout;
-            this.ClientSize = new System.Drawing.Size(284, 291);
+            this.ClientSize = new System.Drawing.Size(284, 345);
+            this.Controls.Add(this.btnGeneratePurchaseReport);
             this.Controls.Add(this.btnAddEmployee);
             this.Controls.Add(this.btnShop);
             this.Controls.Add(this.btnAddBook);
@@ -155,7 +170,7 @@ namespace BookStoreApp
         // Event Handler for Cart Button
         private void btnShop_Click(object sender, EventArgs e)
         {
-            frmCart shopForm = new frmCart();
+            CartForm shopForm = new CartForm();
             shopForm.Show();
             this.Hide();
         }
@@ -165,6 +180,14 @@ namespace BookStoreApp
         {
             AddEmployeeForm addEmployeeForm = new AddEmployeeForm();
             addEmployeeForm.Show();
+            this.Hide();
+        }
+
+        // Event Handler for AGenerate Purchase Report Button
+        private void btnGeneratePurchaseReport_Click(object sender, EventArgs e)
+        {
+            ReportForm reportForm = new ReportForm();
+            reportForm.Show();
             this.Hide();
         }
     }

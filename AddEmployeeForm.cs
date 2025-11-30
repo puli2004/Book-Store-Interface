@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookStoreApp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,7 +25,9 @@ namespace Book_Store_Interface
 
         private void btnBackToMenu_Click(object sender, EventArgs e)
         {
-            Close();
+            MainMenuForm mainMenuForm = new MainMenuForm();
+            mainMenuForm.Show();
+            this.Hide();
         }
 
         private void btnAddEmployee_Click(object sender, EventArgs e)

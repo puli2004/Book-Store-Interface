@@ -1,4 +1,5 @@
 ﻿using Book_Store_Interface.Models;
+using BookStoreApp;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,9 +16,12 @@ using System.Windows.Forms;
 
 namespace Book_Store_Interface
 {
-    public partial class frmCart : Form
+    public partial class CartForm : Form
     {
-        public frmCart()
+        private List<ShoppingCartItem> shoppingCart = new List<ShoppingCartItem>();
+        string strSubtotal, strTax, strTotal;
+
+        public CartForm()
         {
             InitializeComponent();
         }
@@ -55,8 +59,7 @@ namespace Book_Store_Interface
             cboBookTitles.ValueMember = "TitleID";
 
         }
-
-        private List<ShoppingCartItem> shoppingCart = new List<ShoppingCartItem>();
+       
 
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
@@ -90,9 +93,14 @@ namespace Book_Store_Interface
             decimal tax = subtotal * 0.07m;
             decimal total = subtotal + tax;
 
-            txtbxTax.Text = tax.ToString();
-            txtbxSubTotal.Text = subtotal.ToString();
+            txtbxTax.Text = tax.ToString("C");
+            txtbxSubTotal.Text = subtotal.ToString("C");
             txtbxTotal.Text = total.ToString("C");
+
+            // Set values to send to summary
+            strTax = tax.ToString("C");
+            strSubtotal = subtotal.ToString("C");
+            strTotal = total.ToString("C");
         }
 
         private void updateCartList()
@@ -101,13 +109,22 @@ namespace Book_Store_Interface
             foreach (var item in shoppingCart)
             {
                 decimal totalBookPrice = item.UnitPrice * item.Quantity;
-                txtCartList.Text += ($"${item.UnitPrice:F2} - {item.Title} | Total: ${totalBookPrice:F2}");
+                txtCartList.AppendText($"${item.UnitPrice:F2} - {item.Title} | Total: ${totalBookPrice:F2}");
             }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            Close();
+            MainMenuForm mainMenuForm = new MainMenuForm();
+            mainMenuForm.Show();
+            this.Hide();
+        }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            SummaryForm summaryForm = new SummaryForm(shoppingCart, strTax, strTotal, strSubtotal);
+            summaryForm.Show();
+            this.Hide();
         }
     }
 }

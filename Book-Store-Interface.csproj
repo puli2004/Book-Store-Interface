@@ -74,14 +74,26 @@
     <Compile Include="AddEmployeeForm.Designer.cs">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BorrowBookForm.cs">
+    <Compile Include="ReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCart.cs">
+    <Compile Include="ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SummaryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCart.Designer.cs">
-      <DependentUpon>frmCart.cs</DependentUpon>
+    <Compile Include="SummaryForm.Designer.cs">
+      <DependentUpon>SummaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnusedForms\BorrowBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CartForm.Designer.cs">
+      <DependentUpon>CartForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -105,7 +117,7 @@
     <Compile Include="Repository\OrderRepository.cs" />
     <Compile Include="Repository\CustomerRepository.cs" />
     <Compile Include="Repository\TitleRepository.cs" />
-    <Compile Include="ReturnBookForm.cs">
+    <Compile Include="UnusedForms\ReturnBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SearchBookForm.cs">
@@ -117,11 +129,17 @@
     <EmbeddedResource Include="AddEmployeeForm.resx">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BorrowBookForm.resx">
+    <EmbeddedResource Include="ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SummaryForm.resx">
+      <DependentUpon>SummaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnusedForms\BorrowBookForm.resx">
       <DependentUpon>BorrowBookForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCart.resx">
-      <DependentUpon>frmCart.cs</DependentUpon>
+    <EmbeddedResource Include="CartForm.resx">
+      <DependentUpon>CartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -138,7 +156,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ReturnBookForm.resx">
+    <EmbeddedResource Include="UnusedForms\ReturnBookForm.resx">
       <DependentUpon>ReturnBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchBookForm.resx">

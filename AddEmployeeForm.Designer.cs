@@ -68,7 +68,7 @@
             this.txtFirstName.Location = new System.Drawing.Point(99, 77);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(246, 21);
-            this.txtFirstName.TabIndex = 15;
+            this.txtFirstName.TabIndex = 0;
             // 
             // lblEmployeeMiddleInitial
             // 
@@ -86,7 +86,7 @@
             this.txtMiddleInitial.Location = new System.Drawing.Point(99, 117);
             this.txtMiddleInitial.Name = "txtMiddleInitial";
             this.txtMiddleInitial.Size = new System.Drawing.Size(246, 21);
-            this.txtMiddleInitial.TabIndex = 17;
+            this.txtMiddleInitial.TabIndex = 1;
             // 
             // lblEmployeeLastName
             // 
@@ -104,7 +104,7 @@
             this.txtLastName.Location = new System.Drawing.Point(99, 157);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(246, 21);
-            this.txtLastName.TabIndex = 19;
+            this.txtLastName.TabIndex = 2;
             // 
             // lblYear
             // 
@@ -124,7 +124,7 @@
             this.btnAddEmployee.Location = new System.Drawing.Point(69, 240);
             this.btnAddEmployee.Name = "btnAddEmployee";
             this.btnAddEmployee.Size = new System.Drawing.Size(120, 40);
-            this.btnAddEmployee.TabIndex = 24;
+            this.btnAddEmployee.TabIndex = 4;
             this.btnAddEmployee.Text = "Add Employee";
             this.btnAddEmployee.UseVisualStyleBackColor = false;
             this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
@@ -138,7 +138,7 @@
             this.btnBackToMenu.Location = new System.Drawing.Point(204, 240);
             this.btnBackToMenu.Name = "btnBackToMenu";
             this.btnBackToMenu.Size = new System.Drawing.Size(120, 40);
-            this.btnBackToMenu.TabIndex = 25;
+            this.btnBackToMenu.TabIndex = 5;
             this.btnBackToMenu.Text = "Back to Menu";
             this.btnBackToMenu.UseVisualStyleBackColor = false;
             this.btnBackToMenu.Click += new System.EventHandler(this.btnBackToMenu_Click);
@@ -148,7 +148,7 @@
             this.dtpHireDate.Location = new System.Drawing.Point(100, 199);
             this.dtpHireDate.Name = "dtpHireDate";
             this.dtpHireDate.Size = new System.Drawing.Size(245, 20);
-            this.dtpHireDate.TabIndex = 26;
+            this.dtpHireDate.TabIndex = 3;
             // 
             // AddEmployeeForm
             // 

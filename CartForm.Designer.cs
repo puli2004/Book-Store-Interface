@@ -1,6 +1,6 @@
 ﻿namespace Book_Store_Interface
 {
-    partial class frmCart
+    partial class CartForm
     {
         /// <summary>
         /// Required designer variable.
@@ -66,7 +66,7 @@
             0});
             this.nudQuantity.Name = "nudQuantity";
             this.nudQuantity.Size = new System.Drawing.Size(44, 23);
-            this.nudQuantity.TabIndex = 0;
+            this.nudQuantity.TabIndex = 1;
             // 
             // btnAddToCart
             // 
@@ -76,7 +76,7 @@
             this.btnAddToCart.Location = new System.Drawing.Point(452, 59);
             this.btnAddToCart.Name = "btnAddToCart";
             this.btnAddToCart.Size = new System.Drawing.Size(120, 40);
-            this.btnAddToCart.TabIndex = 1;
+            this.btnAddToCart.TabIndex = 2;
             this.btnAddToCart.Text = "Add To Cart";
             this.btnAddToCart.UseVisualStyleBackColor = false;
             this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
@@ -128,9 +128,9 @@
             this.lblSubTotal.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubTotal.Location = new System.Drawing.Point(387, 158);
             this.lblSubTotal.Name = "lblSubTotal";
-            this.lblSubTotal.Size = new System.Drawing.Size(88, 23);
+            this.lblSubTotal.Size = new System.Drawing.Size(82, 23);
             this.lblSubTotal.TabIndex = 18;
-            this.lblSubTotal.Text = "Sub Total:";
+            this.lblSubTotal.Text = "Subtotal:";
             // 
             // txtbxSubTotal
             // 
@@ -170,9 +170,10 @@
             this.btnCheckout.Location = new System.Drawing.Point(452, 232);
             this.btnCheckout.Name = "btnCheckout";
             this.btnCheckout.Size = new System.Drawing.Size(120, 40);
-            this.btnCheckout.TabIndex = 2;
+            this.btnCheckout.TabIndex = 3;
             this.btnCheckout.Text = "Chekout";
             this.btnCheckout.UseVisualStyleBackColor = false;
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 
             // btnCancel
             // 
@@ -183,15 +184,17 @@
             this.btnCancel.Location = new System.Drawing.Point(472, 23);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 30);
-            this.btnCancel.TabIndex = 3;
+            this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // frmCart
+            // CartForm
             // 
+            this.AcceptButton = this.btnAddToCart;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(592, 292);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnCheckout);
@@ -206,7 +209,7 @@
             this.Controls.Add(this.btnAddToCart);
             this.Controls.Add(this.nudQuantity);
             this.Controls.Add(this.cboBookTitles);
-            this.Name = "frmCart";
+            this.Name = "CartForm";
             this.Text = "Shopping Cart";
             this.Load += new System.EventHandler(this.frmCart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
