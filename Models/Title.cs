@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Book_Store_Interface.Models
 {
-    public     class Title
+    public class Title
     {
         public string TitleID { get; set; }
         public string TitleName { get; set; }

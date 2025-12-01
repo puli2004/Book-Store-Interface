@@ -74,12 +74,14 @@
     <Compile Include="AddEmployeeForm.Designer.cs">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Sales.cs" />
     <Compile Include="ReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Repository\SalesRepository.cs" />
     <Compile Include="SummaryForm.cs">
       <SubType>Form</SubType>
     </Compile>

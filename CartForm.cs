@@ -83,6 +83,7 @@ namespace Book_Store_Interface
             
             updateTotals();
             updateCartList();
+            cboBookTitles.SelectedIndex = -1;
         }
 
         private void updateTotals()
@@ -97,7 +98,6 @@ namespace Book_Store_Interface
             txtbxSubTotal.Text = subtotal.ToString("C");
             txtbxTotal.Text = total.ToString("C");
 
-            // Set values to send to summary
             strTax = tax.ToString("C");
             strSubtotal = subtotal.ToString("C");
             strTotal = total.ToString("C");
@@ -109,8 +109,18 @@ namespace Book_Store_Interface
             foreach (var item in shoppingCart)
             {
                 decimal totalBookPrice = item.UnitPrice * item.Quantity;
-                txtCartList.AppendText($"${item.UnitPrice:F2} - {item.Title} | Total: ${totalBookPrice:F2}");
+                txtCartList.AppendText($"${item.UnitPrice:F2} - {item.Title} | Total: ${totalBookPrice:F2}" + Environment.NewLine);
             }
+        }
+
+        private void txtCartList_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nudQuantity_ValueChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

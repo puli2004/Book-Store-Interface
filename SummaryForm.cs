@@ -1,4 +1,5 @@
 ﻿using Book_Store_Interface.Models;
+using Book_Store_Interface.Repository;
 using BookStoreApp;
 using System;
 using System.Collections.Generic;
@@ -27,17 +28,43 @@ namespace Book_Store_Interface
 
         private void btnConfirmPurchase_Click(object sender, EventArgs e)
         {
-            // ADD CONFIRM LOGIC
+            SalesRepository repo = new SalesRepository();
+
+            string ordNum = repo.GetNextOrderNumber();
+
+            
+            string storeId = "7066"; 
+
+            foreach (var item in shoppingCartItems)
+            {
+                Sales sale = new Sales
+                {
+                    StorId = storeId,
+                    OrdNum = ordNum,
+                    OrdDate = DateTime.Now,
+                    Qty = (short)item.Quantity,
+                    PayTerms = "Net 30",              
+                    TitleId = item.TitleID.ToString()             
+                };
+
+                repo.InsertSale(sale);
+            }
+
+            MessageBox.Show($"Purchase confirmed!\nOrder Number: {ordNum}");
+        }
+
+        private void txtCartList_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void SummaryForm_Load(object sender, EventArgs e)
         {
-            // Load purchase report
             txtCartList.Text = "Confirm purchase of:\n";
             foreach (var item in shoppingCartItems)
             {
                 decimal totalBookPrice = item.UnitPrice * item.Quantity;
-                txtCartList.AppendText($"${item.UnitPrice:F2} - {item.Title} | Total: ${totalBookPrice:F2}");
+                txtCartList.AppendText($"${item.UnitPrice:F2} - {item.Title} | Total: ${totalBookPrice:F2}" + Environment.NewLine);
             }
             txtbxTax.Text = tax.ToString();
             txtbxSubTotal.Text = subtotal.ToString();
