@@ -113,16 +113,6 @@ namespace Book_Store_Interface
             }
         }
 
-        private void txtCartList_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nudQuantity_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             MainMenuForm mainMenuForm = new MainMenuForm();

@@ -60,6 +60,19 @@ namespace Book_Store_Interface
                 MessageBox.Show("Report created successfully!");
             }
 
+            // Write to box for demo purposes
+            txtReportList.AppendText($"SALES REPORT{Environment.NewLine}From {start} to {end}{Environment.NewLine}======================================={Environment.NewLine}");
+            foreach (var item in results)
+            {
+                txtReportList.AppendText(
+                    $"Ord#: {item.OrdNum} | {Environment.NewLine}" +
+                    $"TitleID: {item.TitleId} | {Environment.NewLine}" +
+                    $"Title: {item.Title} | {Environment.NewLine}" +
+                    $"Qty: {item.Qty} | {Environment.NewLine}" +
+                    $"OrdDate: {item.OrdDate:d} | {Environment.NewLine}" +
+                    $"Total: ${item.TotalValue:F2}{Environment.NewLine}"
+                );
+            }
         }
 
         private void btnGoBack_Click(object sender, EventArgs e)
@@ -67,11 +80,6 @@ namespace Book_Store_Interface
             MainMenuForm mainMenuForm = new MainMenuForm();
             mainMenuForm.Show();
             this.Hide();
-        }
-
-        private void dtpStartDate_ValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
