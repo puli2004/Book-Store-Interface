@@ -12,6 +12,7 @@ namespace BookStoreApp
         private Button btnShop;
         private Button btnAddEmployee;
         private Button btnGeneratePurchaseReport;
+        private Button btnAddAuthor;
         private Button btnAddBook;
 
         public MainMenuForm()
@@ -28,6 +29,7 @@ namespace BookStoreApp
             this.btnShop = new System.Windows.Forms.Button();
             this.btnAddEmployee = new System.Windows.Forms.Button();
             this.btnGeneratePurchaseReport = new System.Windows.Forms.Button();
+            this.btnAddAuthor = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSearchBook
@@ -49,7 +51,7 @@ namespace BookStoreApp
             this.btnLogout.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnLogout.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(42, 269);
+            this.btnLogout.Location = new System.Drawing.Point(42, 315);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(200, 40);
             this.btnLogout.TabIndex = 5;
@@ -75,7 +77,7 @@ namespace BookStoreApp
             this.btnShop.BackColor = System.Drawing.Color.Blue;
             this.btnShop.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShop.ForeColor = System.Drawing.Color.White;
-            this.btnShop.Location = new System.Drawing.Point(42, 177);
+            this.btnShop.Location = new System.Drawing.Point(42, 223);
             this.btnShop.Name = "btnShop";
             this.btnShop.Size = new System.Drawing.Size(200, 40);
             this.btnShop.TabIndex = 3;
@@ -101,7 +103,7 @@ namespace BookStoreApp
             this.btnGeneratePurchaseReport.BackColor = System.Drawing.Color.Blue;
             this.btnGeneratePurchaseReport.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGeneratePurchaseReport.ForeColor = System.Drawing.Color.White;
-            this.btnGeneratePurchaseReport.Location = new System.Drawing.Point(42, 223);
+            this.btnGeneratePurchaseReport.Location = new System.Drawing.Point(42, 269);
             this.btnGeneratePurchaseReport.Name = "btnGeneratePurchaseReport";
             this.btnGeneratePurchaseReport.Size = new System.Drawing.Size(200, 40);
             this.btnGeneratePurchaseReport.TabIndex = 4;
@@ -109,11 +111,25 @@ namespace BookStoreApp
             this.btnGeneratePurchaseReport.UseVisualStyleBackColor = false;
             this.btnGeneratePurchaseReport.Click += new System.EventHandler(this.btnGeneratePurchaseReport_Click);
             // 
+            // btnAddAuthor
+            // 
+            this.btnAddAuthor.BackColor = System.Drawing.Color.Blue;
+            this.btnAddAuthor.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAuthor.ForeColor = System.Drawing.Color.White;
+            this.btnAddAuthor.Location = new System.Drawing.Point(42, 177);
+            this.btnAddAuthor.Name = "btnAddAuthor";
+            this.btnAddAuthor.Size = new System.Drawing.Size(200, 40);
+            this.btnAddAuthor.TabIndex = 6;
+            this.btnAddAuthor.Text = "Add Author";
+            this.btnAddAuthor.UseVisualStyleBackColor = false;
+            this.btnAddAuthor.Click += new System.EventHandler(this.btnAddAuthor_Click);
+            // 
             // MainMenuForm
             // 
             this.AcceptButton = this.btnSearchBook;
             this.CancelButton = this.btnLogout;
-            this.ClientSize = new System.Drawing.Size(284, 345);
+            this.ClientSize = new System.Drawing.Size(284, 398);
+            this.Controls.Add(this.btnAddAuthor);
             this.Controls.Add(this.btnGeneratePurchaseReport);
             this.Controls.Add(this.btnAddEmployee);
             this.Controls.Add(this.btnShop);
@@ -188,6 +204,13 @@ namespace BookStoreApp
         {
             ReportForm reportForm = new ReportForm();
             reportForm.Show();
+            this.Hide();
+        }
+
+        private void btnAddAuthor_Click(object sender, EventArgs e)
+        {
+            AddAuthorForm addAuthorForm = new AddAuthorForm();
+            addAuthorForm.Show();
             this.Hide();
         }
     }
