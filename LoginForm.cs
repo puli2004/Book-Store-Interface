@@ -1,10 +1,11 @@
 ﻿using Book_Store_Interface.Models;
 using Book_Store_Interface.Repository;
+using BookStoreApp;
 using System;
 using System.Configuration;
 using System.Windows.Forms;
 
-namespace BookStoreApp
+namespace Book_Store_Interface
 {
     public partial class LoginForm : Form
     {
@@ -83,10 +84,14 @@ namespace BookStoreApp
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.Blue;
-            this.btnLogin.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(134, 166);
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Corbel", 12F);
+            this.btnLogin.ForeColor = System.Drawing.Color.Black;
+            this.btnLogin.Location = new System.Drawing.Point(111, 166);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(100, 30);
             this.btnLogin.TabIndex = 2;
@@ -96,10 +101,14 @@ namespace BookStoreApp
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.Blue;
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Corbel", 12F);
+            this.btnCancel.ForeColor = System.Drawing.Color.Black;
             this.btnCancel.Location = new System.Drawing.Point(234, 166);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 30);
@@ -135,13 +144,13 @@ namespace BookStoreApp
 
             Employee emp = repo.ValidateLogin(employeeId);
 
-            if (emp != null || (txtUsername.Text == "admin" && txtPassword.Text == "password"))
+            if (emp != null || txtUsername.Text == "admin" && txtPassword.Text == "password")
             {
                 MessageBox.Show("Login Successful!");
 
                 MainMenuForm mainMenu = new MainMenuForm();
                 mainMenu.Show();
-                this.Hide();
+                Hide();
             }
             else
             {
@@ -152,7 +161,7 @@ namespace BookStoreApp
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close(); // Close the application
+            Close(); // Close the application
         }
 
         private TextBox txtUsername;

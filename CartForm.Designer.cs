@@ -1,211 +1,173 @@
-﻿namespace Book_Store_Interface
+﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace Book_Store_Interface
 {
     partial class CartForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.cboBookTitles = new System.Windows.Forms.ComboBox();
-            this.nudQuantity = new System.Windows.Forms.NumericUpDown();
-            this.btnAddToCart = new System.Windows.Forms.Button();
-            this.txtbxTax = new System.Windows.Forms.TextBox();
-            this.lblTax = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.txtCartList = new System.Windows.Forms.TextBox();
-            this.lblSubTotal = new System.Windows.Forms.Label();
-            this.txtbxSubTotal = new System.Windows.Forms.TextBox();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.txtbxTotal = new System.Windows.Forms.TextBox();
-            this.btnCheckout = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.cboBookTitles = new ComboBox();
+            this.nudQuantity = new NumericUpDown();
+            this.btnAddToCart = new Button();
+            this.txtbxTax = new TextBox();
+            this.lblTax = new Label();
+            this.lblTitle = new Label();
+            this.txtCartList = new TextBox();
+            this.lblSubTotal = new Label();
+            this.txtbxSubTotal = new TextBox();
+            this.lblTotal = new Label();
+            this.txtbxTotal = new TextBox();
+            this.btnCheckout = new Button();
+            this.btnCancel = new Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
             this.SuspendLayout();
             // 
             // cboBookTitles
             // 
-            this.cboBookTitles.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cboBookTitles.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cboBookTitles.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboBookTitles.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            this.cboBookTitles.AutoCompleteSource = AutoCompleteSource.ListItems;
+            this.cboBookTitles.Font = new Font("Corbel", 9.75F);
             this.cboBookTitles.FormattingEnabled = true;
-            this.cboBookTitles.Location = new System.Drawing.Point(29, 70);
+            this.cboBookTitles.Location = new Point(29, 70);
             this.cboBookTitles.Name = "cboBookTitles";
-            this.cboBookTitles.Size = new System.Drawing.Size(367, 23);
+            this.cboBookTitles.Size = new Size(367, 23);
             this.cboBookTitles.TabIndex = 0;
             // 
             // nudQuantity
             // 
-            this.nudQuantity.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudQuantity.Location = new System.Drawing.Point(402, 70);
-            this.nudQuantity.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.nudQuantity.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.nudQuantity.Font = new Font("Corbel", 9.75F);
+            this.nudQuantity.Location = new Point(402, 70);
+            this.nudQuantity.Maximum = 99;
+            this.nudQuantity.Minimum = 1;
             this.nudQuantity.Name = "nudQuantity";
-            this.nudQuantity.Size = new System.Drawing.Size(44, 23);
+            this.nudQuantity.Size = new Size(44, 23);
             this.nudQuantity.TabIndex = 1;
-            this.nudQuantity.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.nudQuantity.Value = 1;
             // 
             // btnAddToCart
             // 
-            this.btnAddToCart.BackColor = System.Drawing.Color.Blue;
-            this.btnAddToCart.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddToCart.ForeColor = System.Drawing.Color.White;
-            this.btnAddToCart.Location = new System.Drawing.Point(452, 59);
+            this.btnAddToCart.Font = new Font("Corbel", 12F);
+            this.btnAddToCart.Location = new Point(452, 59);
             this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(120, 40);
+            this.btnAddToCart.Size = new Size(120, 40);
             this.btnAddToCart.TabIndex = 2;
             this.btnAddToCart.Text = "Add To Cart";
-            this.btnAddToCart.UseVisualStyleBackColor = false;
-            this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
+            this.btnAddToCart.UseVisualStyleBackColor = true;
+            this.btnAddToCart.Click += new EventHandler(this.btnAddToCart_Click);
             // 
             // txtbxTax
             // 
-            this.txtbxTax.BackColor = System.Drawing.SystemColors.Window;
-            this.txtbxTax.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxTax.Location = new System.Drawing.Point(472, 115);
+            this.txtbxTax.BackColor = SystemColors.Window;
+            this.txtbxTax.Font = new Font("Corbel", 14.25F);
+            this.txtbxTax.Location = new Point(472, 115);
             this.txtbxTax.Name = "txtbxTax";
             this.txtbxTax.ReadOnly = true;
-            this.txtbxTax.Size = new System.Drawing.Size(100, 31);
+            this.txtbxTax.Size = new Size(100, 31);
             this.txtbxTax.TabIndex = 3;
             // 
             // lblTax
             // 
             this.lblTax.AutoSize = true;
-            this.lblTax.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTax.Location = new System.Drawing.Point(423, 123);
+            this.lblTax.Font = new Font("Corbel", 14.25F);
+            this.lblTax.Location = new Point(423, 123);
             this.lblTax.Name = "lblTax";
-            this.lblTax.Size = new System.Drawing.Size(43, 23);
+            this.lblTax.Size = new Size(43, 23);
             this.lblTax.TabIndex = 4;
             this.lblTax.Text = "Tax:";
             // 
             // lblTitle
             // 
-            this.lblTitle.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(16, 9);
+            this.lblTitle.Font = new Font("Corbel", 20.25F);
+            this.lblTitle.Location = new Point(16, 9);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(450, 44);
+            this.lblTitle.Size = new Size(450, 44);
             this.lblTitle.TabIndex = 14;
             this.lblTitle.Text = "Checkout";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // txtCartList
             // 
-            this.txtCartList.BackColor = System.Drawing.Color.LightGreen;
-            this.txtCartList.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCartList.Location = new System.Drawing.Point(12, 111);
+            this.txtCartList.BackColor = Color.LightGreen;
+            this.txtCartList.Font = new Font("Corbel", 9.75F);
+            this.txtCartList.Location = new Point(12, 111);
             this.txtCartList.Multiline = true;
             this.txtCartList.Name = "txtCartList";
             this.txtCartList.ReadOnly = true;
-            this.txtCartList.Size = new System.Drawing.Size(368, 162);
+            this.txtCartList.Size = new Size(368, 162);
             this.txtCartList.TabIndex = 16;
             // 
             // lblSubTotal
             // 
             this.lblSubTotal.AutoSize = true;
-            this.lblSubTotal.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubTotal.Location = new System.Drawing.Point(387, 158);
+            this.lblSubTotal.Font = new Font("Corbel", 14.25F);
+            this.lblSubTotal.Location = new Point(387, 158);
             this.lblSubTotal.Name = "lblSubTotal";
-            this.lblSubTotal.Size = new System.Drawing.Size(82, 23);
+            this.lblSubTotal.Size = new Size(82, 23);
             this.lblSubTotal.TabIndex = 18;
             this.lblSubTotal.Text = "Subtotal:";
             // 
             // txtbxSubTotal
             // 
-            this.txtbxSubTotal.BackColor = System.Drawing.SystemColors.Window;
-            this.txtbxSubTotal.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxSubTotal.Location = new System.Drawing.Point(472, 152);
+            this.txtbxSubTotal.BackColor = SystemColors.Window;
+            this.txtbxSubTotal.Font = new Font("Corbel", 14.25F);
+            this.txtbxSubTotal.Location = new Point(472, 152);
             this.txtbxSubTotal.Name = "txtbxSubTotal";
             this.txtbxSubTotal.ReadOnly = true;
-            this.txtbxSubTotal.Size = new System.Drawing.Size(100, 31);
+            this.txtbxSubTotal.Size = new Size(100, 31);
             this.txtbxSubTotal.TabIndex = 17;
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(416, 192);
+            this.lblTotal.Font = new Font("Corbel", 14.25F);
+            this.lblTotal.Location = new Point(416, 192);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(55, 23);
+            this.lblTotal.Size = new Size(55, 23);
             this.lblTotal.TabIndex = 20;
             this.lblTotal.Text = "Total:";
             // 
             // txtbxTotal
             // 
-            this.txtbxTotal.BackColor = System.Drawing.SystemColors.Window;
-            this.txtbxTotal.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxTotal.Location = new System.Drawing.Point(472, 189);
+            this.txtbxTotal.BackColor = SystemColors.Window;
+            this.txtbxTotal.Font = new Font("Corbel", 14.25F);
+            this.txtbxTotal.Location = new Point(472, 189);
             this.txtbxTotal.Name = "txtbxTotal";
             this.txtbxTotal.ReadOnly = true;
-            this.txtbxTotal.Size = new System.Drawing.Size(100, 31);
+            this.txtbxTotal.Size = new Size(100, 31);
             this.txtbxTotal.TabIndex = 19;
             // 
             // btnCheckout
             // 
-            this.btnCheckout.BackColor = System.Drawing.Color.Blue;
-            this.btnCheckout.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckout.ForeColor = System.Drawing.Color.White;
-            this.btnCheckout.Location = new System.Drawing.Point(452, 232);
+            this.btnCheckout.Font = new Font("Corbel", 12F);
+            this.btnCheckout.Location = new Point(452, 232);
             this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Size = new System.Drawing.Size(120, 40);
+            this.btnCheckout.Size = new Size(120, 40);
             this.btnCheckout.TabIndex = 3;
-            this.btnCheckout.Text = "Chekout";
-            this.btnCheckout.UseVisualStyleBackColor = false;
-            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
+            this.btnCheckout.Text = "Checkout";
+            this.btnCheckout.UseVisualStyleBackColor = true;
+            this.btnCheckout.Click += new EventHandler(this.btnCheckout_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.Blue;
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(472, 23);
+            this.btnCancel.DialogResult = DialogResult.Cancel;
+            this.btnCancel.Font = new Font("Corbel", 12F);
+            this.btnCancel.Location = new Point(472, 23);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(100, 30);
+            this.btnCancel.Size = new Size(100, 30);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new EventHandler(this.btnCancel_Click);
             // 
             // CartForm
             // 
             this.AcceptButton = this.btnAddToCart;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(592, 292);
+            this.ClientSize = new Size(592, 292);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnCheckout);
             this.Controls.Add(this.lblTotal);
@@ -221,27 +183,24 @@
             this.Controls.Add(this.cboBookTitles);
             this.Name = "CartForm";
             this.Text = "Shopping Cart";
-            this.Load += new System.EventHandler(this.frmCart_Load);
+            this.Load += new EventHandler(this.frmCart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
-        #endregion
-
-        private System.Windows.Forms.ComboBox cboBookTitles;
-        private System.Windows.Forms.NumericUpDown nudQuantity;
-        private System.Windows.Forms.Button btnAddToCart;
-        private System.Windows.Forms.TextBox txtbxTax;
-        private System.Windows.Forms.Label lblTax;
-        private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.TextBox txtCartList;
-        private System.Windows.Forms.Label lblSubTotal;
-        private System.Windows.Forms.TextBox txtbxSubTotal;
-        private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.TextBox txtbxTotal;
-        private System.Windows.Forms.Button btnCheckout;
-        private System.Windows.Forms.Button btnCancel;
+        private ComboBox cboBookTitles;
+        private NumericUpDown nudQuantity;
+        private Button btnAddToCart;
+        private TextBox txtbxTax;
+        private Label lblTax;
+        private Label lblTitle;
+        private TextBox txtCartList;
+        private Label lblSubTotal;
+        private TextBox txtbxSubTotal;
+        private Label lblTotal;
+        private TextBox txtbxTotal;
+        private Button btnCheckout;
+        private Button btnCancel;
     }
 }

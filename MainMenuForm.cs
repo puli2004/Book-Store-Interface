@@ -1,5 +1,6 @@
 ﻿using Book_Store_Interface;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace BookStoreApp
@@ -29,85 +30,61 @@ namespace BookStoreApp
             this.btnAddEmployee = new System.Windows.Forms.Button();
             this.btnGeneratePurchaseReport = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnSearchBook
-            // 
-            this.btnSearchBook.BackColor = System.Drawing.Color.Blue;
-            this.btnSearchBook.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchBook.ForeColor = System.Drawing.Color.White;
-            this.btnSearchBook.Location = new System.Drawing.Point(42, 85);
-            this.btnSearchBook.Name = "btnSearchBook";
-            this.btnSearchBook.Size = new System.Drawing.Size(200, 40);
-            this.btnSearchBook.TabIndex = 1;
-            this.btnSearchBook.Text = "Search Book";
-            this.btnSearchBook.UseVisualStyleBackColor = false;
-            this.btnSearchBook.Click += new System.EventHandler(this.OpenSearchBookForm);
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.BackColor = System.Drawing.Color.Blue;
-            this.btnLogout.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnLogout.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(42, 269);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(200, 40);
-            this.btnLogout.TabIndex = 5;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.Logout);
+
             // 
             // btnAddBook
             // 
-            this.btnAddBook.BackColor = System.Drawing.Color.Blue;
-            this.btnAddBook.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddBook.ForeColor = System.Drawing.Color.White;
-            this.btnAddBook.Location = new System.Drawing.Point(42, 39);
-            this.btnAddBook.Name = "btnAddBook";
-            this.btnAddBook.Size = new System.Drawing.Size(200, 40);
-            this.btnAddBook.TabIndex = 0;
-            this.btnAddBook.Text = "Add Book";
-            this.btnAddBook.UseVisualStyleBackColor = false;
-            this.btnAddBook.Click += new System.EventHandler(this.OpenAddBookForm);
+            btnAddBook.Font = new Font("Corbel", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAddBook.Location = new System.Drawing.Point(42, 39);
+            btnAddBook.Name = "btnAddBook";
+            btnAddBook.Size = new System.Drawing.Size(200, 40);
+            btnAddBook.Text = "Add Book";
+            btnAddBook.Click += new EventHandler(OpenAddBookForm);
             // 
-            // btnShop
+            // btnSearchBook
             // 
-            this.btnShop.BackColor = System.Drawing.Color.Blue;
-            this.btnShop.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShop.ForeColor = System.Drawing.Color.White;
-            this.btnShop.Location = new System.Drawing.Point(42, 177);
-            this.btnShop.Name = "btnShop";
-            this.btnShop.Size = new System.Drawing.Size(200, 40);
-            this.btnShop.TabIndex = 3;
-            this.btnShop.Text = "Shop";
-            this.btnShop.UseVisualStyleBackColor = false;
-            this.btnShop.Click += new System.EventHandler(this.btnShop_Click);
+            btnSearchBook.Font = new Font("Corbel", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSearchBook.Location = new System.Drawing.Point(42, 85);
+            btnSearchBook.Name = "btnSearchBook";
+            btnSearchBook.Size = new System.Drawing.Size(200, 40);
+            btnSearchBook.Text = "Search Book";
+            btnSearchBook.Click += new EventHandler(OpenSearchBookForm);
             // 
             // btnAddEmployee
             // 
-            this.btnAddEmployee.BackColor = System.Drawing.Color.Blue;
-            this.btnAddEmployee.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddEmployee.ForeColor = System.Drawing.Color.White;
-            this.btnAddEmployee.Location = new System.Drawing.Point(42, 131);
-            this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(200, 40);
-            this.btnAddEmployee.TabIndex = 2;
-            this.btnAddEmployee.Text = "Add Employee";
-            this.btnAddEmployee.UseVisualStyleBackColor = false;
-            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
+            btnAddEmployee.Font = new Font("Corbel", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAddEmployee.Location = new System.Drawing.Point(42, 131);
+            btnAddEmployee.Name = "btnAddEmployee";
+            btnAddEmployee.Size = new System.Drawing.Size(200, 40);
+            btnAddEmployee.Text = "Add Employee";
+            btnAddEmployee.Click += new EventHandler(btnAddEmployee_Click);
+            // 
+            // btnShop
+            // 
+            btnShop.Font = new Font("Corbel", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnShop.Location = new System.Drawing.Point(42, 177);
+            btnShop.Name = "btnShop";
+            btnShop.Size = new System.Drawing.Size(200, 40);
+            btnShop.Text = "Shop";
+            btnShop.Click += new EventHandler(btnShop_Click);
             // 
             // btnGeneratePurchaseReport
             // 
-            this.btnGeneratePurchaseReport.BackColor = System.Drawing.Color.Blue;
-            this.btnGeneratePurchaseReport.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGeneratePurchaseReport.ForeColor = System.Drawing.Color.White;
-            this.btnGeneratePurchaseReport.Location = new System.Drawing.Point(42, 223);
-            this.btnGeneratePurchaseReport.Name = "btnGeneratePurchaseReport";
-            this.btnGeneratePurchaseReport.Size = new System.Drawing.Size(200, 40);
-            this.btnGeneratePurchaseReport.TabIndex = 4;
-            this.btnGeneratePurchaseReport.Text = "Generate Purchase Report";
-            this.btnGeneratePurchaseReport.UseVisualStyleBackColor = false;
-            this.btnGeneratePurchaseReport.Click += new System.EventHandler(this.btnGeneratePurchaseReport_Click);
+            btnGeneratePurchaseReport.Font = new Font("Corbel", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnGeneratePurchaseReport.Location = new System.Drawing.Point(42, 223);
+            btnGeneratePurchaseReport.Name = "btnGeneratePurchaseReport";
+            btnGeneratePurchaseReport.Size = new System.Drawing.Size(200, 40);
+            btnGeneratePurchaseReport.Text = "Generate Purchase Report";
+            btnGeneratePurchaseReport.Click += new EventHandler(btnGeneratePurchaseReport_Click);
+            // 
+            // btnLogout
+            // 
+            btnLogout.Font = new Font("Corbel", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLogout.Location = new System.Drawing.Point(42, 269);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new System.Drawing.Size(200, 40);
+            btnLogout.Text = "Logout";
+            btnLogout.Click += new EventHandler(Logout);
             // 
             // MainMenuForm
             // 

@@ -1,4 +1,4 @@
-﻿namespace Book_Store_Interface
+﻿ namespace Book_Store_Interface
 {
     partial class SummaryForm
     {
@@ -43,14 +43,16 @@
             // 
             // btnGoBack
             // 
-            this.btnGoBack.BackColor = System.Drawing.Color.Blue;
-            this.btnGoBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnGoBack.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGoBack.ForeColor = System.Drawing.Color.White;
-            this.btnGoBack.Location = new System.Drawing.Point(1365, 712);
-            this.btnGoBack.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.btnGoBack.BackColor = System.Drawing.Color.FromArgb(240, 240, 240);
+            this.btnGoBack.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(0, 120, 215);
+            this.btnGoBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(200, 200, 200);
+            this.btnGoBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(220, 220, 220);
+            this.btnGoBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGoBack.Font = new System.Drawing.Font("Corbel", 12F);
+            this.btnGoBack.ForeColor = System.Drawing.Color.Black;
+            this.btnGoBack.Location = new System.Drawing.Point(431, 250);
             this.btnGoBack.Name = "btnGoBack";
-            this.btnGoBack.Size = new System.Drawing.Size(317, 114);
+            this.btnGoBack.Size = new System.Drawing.Size(100, 40);
             this.btnGoBack.TabIndex = 1;
             this.btnGoBack.Text = "Cancel";
             this.btnGoBack.UseVisualStyleBackColor = false;
@@ -58,14 +60,16 @@
             // 
             // btnConfirmPurchase
             // 
-            this.btnConfirmPurchase.BackColor = System.Drawing.Color.Blue;
-            this.btnConfirmPurchase.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnConfirmPurchase.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmPurchase.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmPurchase.Location = new System.Drawing.Point(28, 717);
-            this.btnConfirmPurchase.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.btnConfirmPurchase.BackColor = System.Drawing.Color.FromArgb(240, 240, 240);
+            this.btnConfirmPurchase.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(0, 120, 215);
+            this.btnConfirmPurchase.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(200, 200, 200);
+            this.btnConfirmPurchase.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(220, 220, 220);
+            this.btnConfirmPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmPurchase.Font = new System.Drawing.Font("Corbel", 12F);
+            this.btnConfirmPurchase.ForeColor = System.Drawing.Color.Black;
+            this.btnConfirmPurchase.Location = new System.Drawing.Point(9, 252);
             this.btnConfirmPurchase.Name = "btnConfirmPurchase";
-            this.btnConfirmPurchase.Size = new System.Drawing.Size(443, 114);
+            this.btnConfirmPurchase.Size = new System.Drawing.Size(140, 40);
             this.btnConfirmPurchase.TabIndex = 0;
             this.btnConfirmPurchase.Text = "Confirm Purchase";
             this.btnConfirmPurchase.UseVisualStyleBackColor = false;
@@ -75,8 +79,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(1156, 572);
-            this.lblTotal.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.lblTotal.Location = new System.Drawing.Point(365, 201);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(55, 23);
             this.lblTotal.TabIndex = 33;
@@ -86,19 +89,17 @@
             // 
             this.txtbxTotal.BackColor = System.Drawing.SystemColors.Window;
             this.txtbxTotal.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxTotal.Location = new System.Drawing.Point(1333, 564);
-            this.txtbxTotal.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.txtbxTotal.Location = new System.Drawing.Point(421, 198);
             this.txtbxTotal.Name = "txtbxTotal";
             this.txtbxTotal.ReadOnly = true;
-            this.txtbxTotal.Size = new System.Drawing.Size(308, 31);
+            this.txtbxTotal.Size = new System.Drawing.Size(100, 31);
             this.txtbxTotal.TabIndex = 32;
             // 
             // lblSubTotal
             // 
             this.lblSubTotal.AutoSize = true;
             this.lblSubTotal.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubTotal.Location = new System.Drawing.Point(545, 581);
-            this.lblSubTotal.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.lblSubTotal.Location = new System.Drawing.Point(172, 204);
             this.lblSubTotal.Name = "lblSubTotal";
             this.lblSubTotal.Size = new System.Drawing.Size(82, 23);
             this.lblSubTotal.TabIndex = 31;
@@ -108,23 +109,21 @@
             // 
             this.txtbxSubTotal.BackColor = System.Drawing.SystemColors.Window;
             this.txtbxSubTotal.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxSubTotal.Location = new System.Drawing.Point(814, 564);
-            this.txtbxSubTotal.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.txtbxSubTotal.Location = new System.Drawing.Point(257, 198);
             this.txtbxSubTotal.Name = "txtbxSubTotal";
             this.txtbxSubTotal.ReadOnly = true;
-            this.txtbxSubTotal.Size = new System.Drawing.Size(308, 31);
+            this.txtbxSubTotal.Size = new System.Drawing.Size(100, 31);
             this.txtbxSubTotal.TabIndex = 30;
             // 
             // txtCartList
             // 
             this.txtCartList.BackColor = System.Drawing.Color.LightGreen;
             this.txtCartList.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCartList.Location = new System.Drawing.Point(28, 85);
-            this.txtCartList.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.txtCartList.Location = new System.Drawing.Point(9, 30);
             this.txtCartList.Multiline = true;
             this.txtCartList.Name = "txtCartList";
             this.txtCartList.ReadOnly = true;
-            this.txtCartList.Size = new System.Drawing.Size(1644, 454);
+            this.txtCartList.Size = new System.Drawing.Size(522, 162);
             this.txtCartList.TabIndex = 29;
             this.txtCartList.TextChanged += new System.EventHandler(this.txtCartList_TextChanged);
             // 
@@ -132,8 +131,7 @@
             // 
             this.lblTax.AutoSize = true;
             this.lblTax.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTax.Location = new System.Drawing.Point(35, 586);
-            this.lblTax.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.lblTax.Location = new System.Drawing.Point(11, 206);
             this.lblTax.Name = "lblTax";
             this.lblTax.Size = new System.Drawing.Size(43, 23);
             this.lblTax.TabIndex = 27;
@@ -143,19 +141,17 @@
             // 
             this.txtbxTax.BackColor = System.Drawing.SystemColors.Window;
             this.txtbxTax.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxTax.Location = new System.Drawing.Point(190, 564);
-            this.txtbxTax.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.txtbxTax.Location = new System.Drawing.Point(60, 198);
             this.txtbxTax.Name = "txtbxTax";
             this.txtbxTax.ReadOnly = true;
-            this.txtbxTax.Size = new System.Drawing.Size(308, 31);
+            this.txtbxTax.Size = new System.Drawing.Size(100, 31);
             this.txtbxTax.TabIndex = 26;
             // 
             // lblPurchaseReport
             // 
             this.lblPurchaseReport.AutoSize = true;
             this.lblPurchaseReport.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPurchaseReport.Location = new System.Drawing.Point(41, 34);
-            this.lblPurchaseReport.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.lblPurchaseReport.Location = new System.Drawing.Point(13, 12);
             this.lblPurchaseReport.Name = "lblPurchaseReport";
             this.lblPurchaseReport.Size = new System.Drawing.Size(95, 15);
             this.lblPurchaseReport.TabIndex = 34;
@@ -164,10 +160,10 @@
             // SummaryForm
             // 
             this.AcceptButton = this.btnConfirmPurchase;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnGoBack;
-            this.ClientSize = new System.Drawing.Size(1723, 865);
+            this.ClientSize = new System.Drawing.Size(621, 324);
             this.Controls.Add(this.lblPurchaseReport);
             this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.btnConfirmPurchase);
@@ -179,7 +175,6 @@
             this.Controls.Add(this.lblTax);
             this.Controls.Add(this.txtbxTax);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Name = "SummaryForm";
             this.Text = "Purchase Summary";
             this.Load += new System.EventHandler(this.SummaryForm_Load);

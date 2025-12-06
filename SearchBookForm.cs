@@ -62,9 +62,14 @@ namespace BookStoreApp
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.Blue;
-            this.btnSearch.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(240, 240, 240);
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(0, 120, 215);
+            this.btnSearch.FlatAppearance.BorderSize = 1;
+            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(220, 220, 220);
+            this.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(200, 200, 200);
+            this.btnSearch.Font = new System.Drawing.Font("Corbel", 12F);
+            this.btnSearch.ForeColor = System.Drawing.Color.Black;
             this.btnSearch.Location = new System.Drawing.Point(398, 80);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(100, 30);
@@ -96,9 +101,14 @@ namespace BookStoreApp
             // 
             // btnViewDetails
             // 
-            this.btnViewDetails.BackColor = System.Drawing.Color.Blue;
-            this.btnViewDetails.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewDetails.ForeColor = System.Drawing.Color.White;
+            this.btnViewDetails.BackColor = System.Drawing.Color.FromArgb(240, 240, 240);
+            this.btnViewDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewDetails.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(0, 120, 215);
+            this.btnViewDetails.FlatAppearance.BorderSize = 1;
+            this.btnViewDetails.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(220, 220, 220);
+            this.btnViewDetails.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(200, 200, 200);
+            this.btnViewDetails.Font = new System.Drawing.Font("Corbel", 12F);
+            this.btnViewDetails.ForeColor = System.Drawing.Color.Black;
             this.btnViewDetails.Location = new System.Drawing.Point(150, 242);
             this.btnViewDetails.Name = "btnViewDetails";
             this.btnViewDetails.Size = new System.Drawing.Size(100, 35);
@@ -106,13 +116,18 @@ namespace BookStoreApp
             this.btnViewDetails.Text = "View Details";
             this.btnViewDetails.UseVisualStyleBackColor = false;
             this.btnViewDetails.Click += new System.EventHandler(this.btnViewDetails_Click);
+
             // 
             // btnBack
             // 
-            this.btnBack.BackColor = System.Drawing.Color.Blue;
-            this.btnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnBack.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(240, 240, 240);
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(0, 120, 215);
+            this.btnBack.FlatAppearance.BorderSize = 1;
+            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(220, 220, 220);
+            this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(200, 200, 200);
+            this.btnBack.Font = new System.Drawing.Font("Corbel", 12F);
+            this.btnBack.ForeColor = System.Drawing.Color.Black;
             this.btnBack.Location = new System.Drawing.Point(283, 242);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(100, 35);

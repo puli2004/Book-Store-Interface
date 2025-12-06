@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.Configuration;
 
-namespace BookStoreApp
+namespace Book_Store_Interface
 {
     static class Program
     {
