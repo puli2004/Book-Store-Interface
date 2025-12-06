@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Drawing;
-using System.Runtime.Remoting.Lifetime;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -14,127 +14,116 @@ namespace BookStoreApp
             InitializeComponent();
         }
 
-        //Validate ISBN formats
-        private bool isValidISBN(String isbn)
+        // Validate ISBN formats (ISBN-10 or ISBN-13)
+        private bool isValidISBN(string isbn)
         {
             if (string.IsNullOrEmpty(isbn))
-            {
                 return false;
-            }
 
-            //Strip hypens or spaces for easier validation
             isbn = isbn.Replace("-", "").Replace(" ", "");
 
-            //Handle ISBN-10
             if (isbn.Length == 10)
             {
-                //Validate first 9 characters are digits 0-9, last character can be a digit or 'X'
                 if (!Regex.IsMatch(isbn, @"^\d{9}(\d|X)$"))
-                {
                     return false;
-                }
 
                 int sum = 0;
-                for (int i = 0; i < isbn.Length; i++)
-                {
-                    //If last digit is X (which represents 10)
-                    if (isbn[i] == 'X')
-                    {
-                        sum += 10 * (i + 1);
-                    }
-                    else sum += (isbn[i] - '0') * (i + 1);
-                }
+                for (int i = 0; i < 10; i++)
+                    sum += (isbn[i] == 'X' ? 10 : isbn[i] - '0') * (i + 1);
 
                 return sum % 11 == 0;
             }
 
-            //Handle ISBN-13
             if (isbn.Length == 13)
             {
-                //Validate all characters are digits 0-9
                 if (!Regex.IsMatch(isbn, @"^\d{13}$"))
-                {
                     return false;
-                }
 
                 int sum = 0;
                 for (int i = 0; i < 12; i++)
-                {
-                    int digit = isbn[i] - '0';
-                    sum += (i % 2 == 0) ? digit : digit * 3;
-                }
+                    sum += (i % 2 == 0 ? 1 : 3) * (isbn[i] - '0');
 
                 int check = (10 - (sum % 10)) % 10;
                 return check == (isbn[12] - '0');
             }
 
             return false;
-
         }
 
-        //Validate input before saving
+        // Validate input fields
         private bool validateInput(out StringBuilder errors)
         {
             errors = new StringBuilder();
 
             if (string.IsNullOrWhiteSpace(txtTitle.Text))
-            {
-                errors.Append("•Please specify a title for the book.\n");
-            }
-
+                errors.Append("• Please enter a book title.\n");
             if (string.IsNullOrWhiteSpace(txtAuthor.Text))
-            {
-                errors.Append("•Please specify an author for the book.\n");
-            }
-
+                errors.Append("• Please enter an author.\n");
             if (string.IsNullOrWhiteSpace(txtGenre.Text))
-            {
-                errors.Append("•Please specify a genre for the book.\n");
-            }
+                errors.Append("• Please enter a genre.\n");
 
-            if (string.IsNullOrWhiteSpace(txtYear.Text))
-            {
-                errors.Append("•Please specify a year for the book.\n");
-            }
-            else if (int.TryParse(txtYear.Text, out int year))
-            {
-                //Range can be changed later if needed
-                if (year < 1500 || year > 2025)
-                {
-                    errors.Append("•Please enter a valid range for the year (1500-2025).\n");
-                }
-            }
-            //If invalid year format
-            else
-            {
-                errors.Append("•Please enter a valid year for the book.\n");
-            }
+            if (!int.TryParse(txtYear.Text, out int year) || year < 1500 || year > 2025)
+                errors.Append("• Please enter a valid Published Year (1500-2025).\n");
+
+            if (!decimal.TryParse(txtPrice.Text, out decimal price) || price < 0)
+                errors.Append("• Please enter a valid Price.\n");
 
             if (!isValidISBN(txtISBN.Text))
-            {
-                errors.Append("•Please specify a valid ISBN-10 or ISBN-13 for the book.");
-            }
+                errors.Append("• Please enter a valid ISBN-10 or ISBN-13.\n");
 
             return errors.Length == 0;
         }
 
-        // Save button click handler
+        // Save book to database
         private void SaveBook_Click(object sender, EventArgs e)
         {
-            /* TESTING PURPOSES
-             * Here are some valid ISBN values to test
-             * ISBN-10: 1-234-56789-X
-             * ISBN-13: 9780306406157
-             */
-            StringBuilder errors;
-            if (!validateInput(out errors))
+            if (!validateInput(out StringBuilder errors))
             {
-                MessageBox.Show(errors.ToString(), "Error");
+                MessageBox.Show(errors.ToString(), "Validation Error");
+                return;
             }
-            else MessageBox.Show("Book Saved!");
+
+            string connString = ConfigurationManager.ConnectionStrings["BookStoreDb"].ConnectionString;
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connString))
+                {
+                    conn.Open();
+
+                    string query = @"INSERT INTO Books (Title, Author, Genre, Price, PublishedYear, ISBN)
+                                     VALUES (@Title, @Author, @Genre, @Price, @PublishedYear, @ISBN)";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Title", txtTitle.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Author", txtAuthor.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Genre", txtGenre.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Price", decimal.Parse(txtPrice.Text.Trim()));
+                        cmd.Parameters.AddWithValue("@PublishedYear", int.Parse(txtYear.Text.Trim()));
+                        cmd.Parameters.AddWithValue("@ISBN", txtISBN.Text.Trim());
+
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+
+                MessageBox.Show("Book saved successfully!", "Success");
+
+                // Clear fields after save
+                txtTitle.Clear();
+                txtAuthor.Clear();
+                txtGenre.Clear();
+                txtYear.Clear();
+                txtPrice.Clear();
+                txtISBN.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error saving book: " + ex.Message, "Database Error");
+            }
         }
 
-        // Back to menu button click handler
+        // Back to main menu
         private void BackToMenu_Click(object sender, EventArgs e)
         {
             MainMenuForm mainMenuForm = new MainMenuForm();

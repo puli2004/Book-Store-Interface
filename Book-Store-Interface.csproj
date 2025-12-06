@@ -82,6 +82,12 @@
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Repository\SalesRepository.cs" />
+    <Compile Include="SearchBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchBookForm.Designer.cs">
+      <DependentUpon>SearchBookForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SummaryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,9 +128,6 @@
     <Compile Include="UnusedForms\ReturnBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SearchBookForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <EmbeddedResource Include="AddBookForm.resx">
       <DependentUpon>AddBookForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchBookForm.resx">
+      <DependentUpon>SearchBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SummaryForm.resx">
       <DependentUpon>SummaryForm.cs</DependentUpon>
@@ -160,9 +166,6 @@
     </Compile>
     <EmbeddedResource Include="UnusedForms\ReturnBookForm.resx">
       <DependentUpon>ReturnBookForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SearchBookForm.resx">
-      <DependentUpon>SearchBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
