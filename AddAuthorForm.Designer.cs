@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddAuthorForm));
             this.lblAddAuthor = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
@@ -54,9 +55,9 @@
             // lblAddAuthor
             // 
             this.lblAddAuthor.Font = new System.Drawing.Font("Corbel", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddAuthor.Location = new System.Drawing.Point(-2, 9);
+            this.lblAddAuthor.Location = new System.Drawing.Point(3, 9);
             this.lblAddAuthor.Name = "lblAddAuthor";
-            this.lblAddAuthor.Size = new System.Drawing.Size(352, 44);
+            this.lblAddAuthor.Size = new System.Drawing.Size(361, 44);
             this.lblAddAuthor.TabIndex = 0;
             this.lblAddAuthor.Text = "Add Author";
             this.lblAddAuthor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -64,7 +65,7 @@
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(21, 95);
+            this.lblFirstName.Location = new System.Drawing.Point(21, 102);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(60, 13);
             this.lblFirstName.TabIndex = 1;
@@ -72,22 +73,22 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(87, 92);
+            this.txtFirstName.Location = new System.Drawing.Point(87, 99);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(270, 20);
-            this.txtFirstName.TabIndex = 2;
+            this.txtFirstName.TabIndex = 1;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(87, 118);
+            this.txtLastName.Location = new System.Drawing.Point(87, 125);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(270, 20);
-            this.txtLastName.TabIndex = 4;
+            this.txtLastName.TabIndex = 2;
             // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(20, 121);
+            this.lblLastName.Location = new System.Drawing.Point(20, 128);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(61, 13);
             this.lblLastName.TabIndex = 3;
@@ -96,7 +97,7 @@
             // lblPhoneNumber
             // 
             this.lblPhoneNumber.AutoSize = true;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(0, 147);
+            this.lblPhoneNumber.Location = new System.Drawing.Point(0, 154);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
             this.lblPhoneNumber.Size = new System.Drawing.Size(81, 13);
             this.lblPhoneNumber.TabIndex = 5;
@@ -104,15 +105,15 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(87, 170);
+            this.txtAddress.Location = new System.Drawing.Point(87, 177);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(270, 20);
-            this.txtAddress.TabIndex = 8;
+            this.txtAddress.TabIndex = 4;
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(33, 173);
+            this.lblAddress.Location = new System.Drawing.Point(33, 180);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(48, 13);
             this.lblAddress.TabIndex = 7;
@@ -120,15 +121,15 @@
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(87, 196);
+            this.txtCity.Location = new System.Drawing.Point(87, 203);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(270, 20);
-            this.txtCity.TabIndex = 10;
+            this.txtCity.TabIndex = 5;
             // 
             // lblCity
             // 
             this.lblCity.AutoSize = true;
-            this.lblCity.Location = new System.Drawing.Point(54, 199);
+            this.lblCity.Location = new System.Drawing.Point(54, 206);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(27, 13);
             this.lblCity.TabIndex = 9;
@@ -137,7 +138,7 @@
             // lblState
             // 
             this.lblState.AutoSize = true;
-            this.lblState.Location = new System.Drawing.Point(46, 225);
+            this.lblState.Location = new System.Drawing.Point(46, 232);
             this.lblState.Name = "lblState";
             this.lblState.Size = new System.Drawing.Size(35, 13);
             this.lblState.TabIndex = 11;
@@ -197,22 +198,22 @@
             "WV",
             "WI",
             "WY"});
-            this.cboState.Location = new System.Drawing.Point(87, 222);
+            this.cboState.Location = new System.Drawing.Point(87, 229);
             this.cboState.Name = "cboState";
             this.cboState.Size = new System.Drawing.Size(270, 21);
-            this.cboState.TabIndex = 12;
+            this.cboState.TabIndex = 6;
             // 
             // txtZipCode
             // 
-            this.txtZipCode.Location = new System.Drawing.Point(87, 249);
+            this.txtZipCode.Location = new System.Drawing.Point(87, 256);
             this.txtZipCode.Name = "txtZipCode";
             this.txtZipCode.Size = new System.Drawing.Size(270, 20);
-            this.txtZipCode.TabIndex = 14;
+            this.txtZipCode.TabIndex = 7;
             // 
             // lblZipCode
             // 
             this.lblZipCode.AutoSize = true;
-            this.lblZipCode.Location = new System.Drawing.Point(28, 252);
+            this.lblZipCode.Location = new System.Drawing.Point(28, 259);
             this.lblZipCode.Name = "lblZipCode";
             this.lblZipCode.Size = new System.Drawing.Size(53, 13);
             this.lblZipCode.TabIndex = 13;
@@ -221,7 +222,7 @@
             // lblContract
             // 
             this.lblContract.AutoSize = true;
-            this.lblContract.Location = new System.Drawing.Point(28, 282);
+            this.lblContract.Location = new System.Drawing.Point(28, 289);
             this.lblContract.Name = "lblContract";
             this.lblContract.Size = new System.Drawing.Size(53, 13);
             this.lblContract.TabIndex = 15;
@@ -230,10 +231,10 @@
             // chkContract
             // 
             this.chkContract.AutoSize = true;
-            this.chkContract.Location = new System.Drawing.Point(87, 282);
+            this.chkContract.Location = new System.Drawing.Point(87, 289);
             this.chkContract.Name = "chkContract";
             this.chkContract.Size = new System.Drawing.Size(15, 14);
-            this.chkContract.TabIndex = 17;
+            this.chkContract.TabIndex = 8;
             this.chkContract.UseVisualStyleBackColor = true;
             // 
             // btnAddAuthor
@@ -241,33 +242,33 @@
             this.btnAddAuthor.BackColor = System.Drawing.SystemColors.Control;
             this.btnAddAuthor.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAuthor.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAddAuthor.Location = new System.Drawing.Point(65, 320);
+            this.btnAddAuthor.Location = new System.Drawing.Point(65, 321);
             this.btnAddAuthor.Name = "btnAddAuthor";
             this.btnAddAuthor.Size = new System.Drawing.Size(120, 40);
-            this.btnAddAuthor.TabIndex = 18;
+            this.btnAddAuthor.TabIndex = 9;
             this.btnAddAuthor.Text = "Add Author";
             this.btnAddAuthor.UseVisualStyleBackColor = false;
             this.btnAddAuthor.Click += new System.EventHandler(this.btnAddAuthor_Click);
             // 
             // mtxtPhoneNumber
             // 
-            this.mtxtPhoneNumber.Location = new System.Drawing.Point(88, 145);
+            this.mtxtPhoneNumber.Location = new System.Drawing.Point(88, 152);
             this.mtxtPhoneNumber.Mask = "000 000-0000";
             this.mtxtPhoneNumber.Name = "mtxtPhoneNumber";
             this.mtxtPhoneNumber.Size = new System.Drawing.Size(269, 20);
-            this.mtxtPhoneNumber.TabIndex = 19;
+            this.mtxtPhoneNumber.TabIndex = 3;
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(87, 66);
+            this.txtID.Location = new System.Drawing.Point(87, 73);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(270, 20);
-            this.txtID.TabIndex = 21;
+            this.txtID.TabIndex = 0;
             // 
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(62, 69);
+            this.lblID.Location = new System.Drawing.Point(62, 76);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(19, 13);
             this.lblID.TabIndex = 20;
@@ -276,20 +277,23 @@
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCancel.Location = new System.Drawing.Point(191, 320);
+            this.btnCancel.Location = new System.Drawing.Point(191, 321);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(120, 40);
-            this.btnCancel.TabIndex = 22;
+            this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // AddAuthorForm
             // 
+            this.AcceptButton = this.btnAddAuthor;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(369, 393);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtID);
@@ -312,6 +316,7 @@
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.lblAddAuthor);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddAuthorForm";
             this.Text = "AddAuthorForm";
             this.ResumeLayout(false);
