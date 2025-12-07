@@ -1,5 +1,6 @@
 ﻿using Book_Store_Interface.Models;
 using Book_Store_Interface.Repository;
+using BookStoreApp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -148,5 +149,11 @@ namespace Book_Store_Interface
             }
         }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            MainMenuForm mainMenuForm = new MainMenuForm();
+            mainMenuForm.Show();
+            this.Close();
+        }
     }
 }

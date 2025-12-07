@@ -48,6 +48,7 @@
             this.mtxtPhoneNumber = new System.Windows.Forms.MaskedTextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblAddAuthor
@@ -237,10 +238,10 @@
             // 
             // btnAddAuthor
             // 
-            this.btnAddAuthor.BackColor = System.Drawing.Color.Blue;
+            this.btnAddAuthor.BackColor = System.Drawing.SystemColors.Control;
             this.btnAddAuthor.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddAuthor.ForeColor = System.Drawing.Color.White;
-            this.btnAddAuthor.Location = new System.Drawing.Point(120, 315);
+            this.btnAddAuthor.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAddAuthor.Location = new System.Drawing.Point(65, 320);
             this.btnAddAuthor.Name = "btnAddAuthor";
             this.btnAddAuthor.Size = new System.Drawing.Size(120, 40);
             this.btnAddAuthor.TabIndex = 18;
@@ -272,11 +273,25 @@
             this.lblID.TabIndex = 20;
             this.lblID.Text = "Id:";
             // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCancel.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCancel.Location = new System.Drawing.Point(191, 320);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(120, 40);
+            this.btnCancel.TabIndex = 22;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // AddAuthorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(369, 393);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.mtxtPhoneNumber);
@@ -326,5 +341,6 @@
         private System.Windows.Forms.MaskedTextBox mtxtPhoneNumber;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

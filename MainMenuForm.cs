@@ -14,6 +14,7 @@ namespace BookStoreApp
         private Button btnAddEmployee;
         private Button btnGeneratePurchaseReport;
         private Button btnAddAuthor;
+        private Button btnAddAuthor_;
         private Button btnAddBook;
 
         public MainMenuForm()
@@ -31,83 +32,103 @@ namespace BookStoreApp
             this.btnAddEmployee = new System.Windows.Forms.Button();
             this.btnGeneratePurchaseReport = new System.Windows.Forms.Button();
             this.btnAddAuthor = new System.Windows.Forms.Button();
+            this.btnAddAuthor_ = new System.Windows.Forms.Button();
             this.SuspendLayout();
-
-            // 
-            // btnAddBook
-            // 
-            btnAddBook.Font = new Font("Corbel", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAddBook.Location = new System.Drawing.Point(42, 39);
-            btnAddBook.Name = "btnAddBook";
-            btnAddBook.Size = new System.Drawing.Size(200, 40);
-            btnAddBook.Text = "Add Book";
-            btnAddBook.Click += new EventHandler(OpenAddBookForm);
-
             // 
             // btnSearchBook
             // 
-            btnSearchBook.Font = new Font("Corbel", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSearchBook.Location = new System.Drawing.Point(42, 85);
-            btnSearchBook.Name = "btnSearchBook";
-            btnSearchBook.Size = new System.Drawing.Size(200, 40);
-            btnSearchBook.Text = "Search Book";
-            btnSearchBook.Click += new EventHandler(OpenSearchBookForm);
-
-            // 
-            // btnAddEmployee
-            // 
-            btnAddEmployee.Font = new Font("Corbel", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAddEmployee.Location = new System.Drawing.Point(42, 131);
-            btnAddEmployee.Name = "btnAddEmployee";
-            btnAddEmployee.Size = new System.Drawing.Size(200, 40);
-            btnAddEmployee.Text = "Add Employee";
-            btnAddEmployee.Click += new EventHandler(btnAddEmployee_Click);
-
-            // 
-            // btnShop
-            // 
-            btnShop.Font = new Font("Corbel", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnShop.Location = new System.Drawing.Point(42, 177);
-            btnShop.Name = "btnShop";
-            btnShop.Size = new System.Drawing.Size(200, 40);
-            btnShop.Text = "Shop";
-            btnShop.Click += new EventHandler(btnShop_Click);
-
-            // 
-            // btnGeneratePurchaseReport
-            // 
-            btnGeneratePurchaseReport.Font = new Font("Corbel", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnGeneratePurchaseReport.Location = new System.Drawing.Point(42, 223);
-            btnGeneratePurchaseReport.Name = "btnGeneratePurchaseReport";
-            btnGeneratePurchaseReport.Size = new System.Drawing.Size(200, 40);
-            btnGeneratePurchaseReport.Text = "Generate Purchase Report";
-            btnGeneratePurchaseReport.Click += new EventHandler(btnGeneratePurchaseReport_Click);
-
+            this.btnSearchBook.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchBook.Location = new System.Drawing.Point(42, 90);
+            this.btnSearchBook.Name = "btnSearchBook";
+            this.btnSearchBook.Size = new System.Drawing.Size(200, 40);
+            this.btnSearchBook.TabIndex = 4;
+            this.btnSearchBook.Text = "Search Book";
+            this.btnSearchBook.Click += new System.EventHandler(this.OpenSearchBookForm);
             // 
             // btnLogout
             // 
-            btnLogout.Font = new Font("Corbel", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnLogout.Location = new System.Drawing.Point(42, 269);
-            btnLogout.Name = "btnLogout";
-            btnLogout.Size = new System.Drawing.Size(200, 40);
-            btnLogout.Text = "Logout";
-            btnLogout.Click += new EventHandler(Logout);
-
+            this.btnLogout.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnLogout.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(42, 320);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(200, 40);
+            this.btnLogout.TabIndex = 5;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.Click += new System.EventHandler(this.Logout);
+            // 
+            // btnAddBook
+            // 
+            this.btnAddBook.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddBook.Location = new System.Drawing.Point(42, 44);
+            this.btnAddBook.Name = "btnAddBook";
+            this.btnAddBook.Size = new System.Drawing.Size(200, 40);
+            this.btnAddBook.TabIndex = 3;
+            this.btnAddBook.Text = "Add Book";
+            this.btnAddBook.Click += new System.EventHandler(this.OpenAddBookForm);
+            // 
+            // btnShop
+            // 
+            this.btnShop.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShop.Location = new System.Drawing.Point(42, 228);
+            this.btnShop.Name = "btnShop";
+            this.btnShop.Size = new System.Drawing.Size(200, 40);
+            this.btnShop.TabIndex = 2;
+            this.btnShop.Text = "Shop";
+            this.btnShop.Click += new System.EventHandler(this.btnShop_Click);
+            // 
+            // btnAddEmployee
+            // 
+            this.btnAddEmployee.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEmployee.Location = new System.Drawing.Point(42, 182);
+            this.btnAddEmployee.Name = "btnAddEmployee";
+            this.btnAddEmployee.Size = new System.Drawing.Size(200, 40);
+            this.btnAddEmployee.TabIndex = 1;
+            this.btnAddEmployee.Text = "Add Employee";
+            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
+            // 
+            // btnGeneratePurchaseReport
+            // 
+            this.btnGeneratePurchaseReport.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGeneratePurchaseReport.Location = new System.Drawing.Point(42, 274);
+            this.btnGeneratePurchaseReport.Name = "btnGeneratePurchaseReport";
+            this.btnGeneratePurchaseReport.Size = new System.Drawing.Size(200, 40);
+            this.btnGeneratePurchaseReport.TabIndex = 0;
+            this.btnGeneratePurchaseReport.Text = "Generate Purchase Report";
+            this.btnGeneratePurchaseReport.Click += new System.EventHandler(this.btnGeneratePurchaseReport_Click);
+            // 
+            // btnAddAuthor
+            // 
+            this.btnAddAuthor.Location = new System.Drawing.Point(0, 0);
+            this.btnAddAuthor.Name = "btnAddAuthor";
+            this.btnAddAuthor.Size = new System.Drawing.Size(75, 23);
+            this.btnAddAuthor.TabIndex = 0;
+            // 
+            // btnAddAuthor_
+            // 
+            this.btnAddAuthor_.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAuthor_.Location = new System.Drawing.Point(42, 136);
+            this.btnAddAuthor_.Name = "btnAddAuthor_";
+            this.btnAddAuthor_.Size = new System.Drawing.Size(200, 40);
+            this.btnAddAuthor_.TabIndex = 6;
+            this.btnAddAuthor_.Text = "Add Author";
+            this.btnAddAuthor_.Click += new System.EventHandler(this.btnAddAuthor__Click);
             // 
             // MainMenuForm
             // 
-            AcceptButton = btnSearchBook;
-            CancelButton = btnLogout;
-            ClientSize = new System.Drawing.Size(284, 345);
-            Controls.Add(btnGeneratePurchaseReport);
-            Controls.Add(btnAddEmployee);
-            Controls.Add(btnShop);
-            Controls.Add(btnAddBook);
-            Controls.Add(btnSearchBook);
-            Controls.Add(btnLogout);
-            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
-            Name = "MainMenuForm";
-            Text = "Main Menu";
+            this.AcceptButton = this.btnSearchBook;
+            this.CancelButton = this.btnLogout;
+            this.ClientSize = new System.Drawing.Size(284, 390);
+            this.Controls.Add(this.btnAddAuthor_);
+            this.Controls.Add(this.btnGeneratePurchaseReport);
+            this.Controls.Add(this.btnAddEmployee);
+            this.Controls.Add(this.btnShop);
+            this.Controls.Add(this.btnAddBook);
+            this.Controls.Add(this.btnSearchBook);
+            this.Controls.Add(this.btnLogout);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "MainMenuForm";
+            this.Text = "Main Menu";
+            this.ResumeLayout(false);
 
         }
 
@@ -175,6 +196,11 @@ namespace BookStoreApp
             this.Hide();
         }
 
-        
+        private void btnAddAuthor__Click(object sender, EventArgs e)
+        {
+            AddAuthorForm addAuthorForm = new AddAuthorForm();
+            addAuthorForm.Show();
+            this.Hide();
+        }
     }
 }

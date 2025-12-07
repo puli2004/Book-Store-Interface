@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddAuthorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAuthorForm.Designer.cs">
+      <DependentUpon>AddAuthorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,7 @@
     <Compile Include="AddEmployeeForm.Designer.cs">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Sales.cs" />
     <Compile Include="ReportForm.cs">
       <SubType>Form</SubType>
@@ -81,6 +88,7 @@
     <Compile Include="ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Repository\AuthorRepository.cs" />
     <Compile Include="Repository\SalesRepository.cs" />
     <Compile Include="SearchBookForm.cs">
       <SubType>Form</SubType>
@@ -128,6 +136,12 @@
     <Compile Include="UnusedForms\ReturnBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SearchBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="AddAuthorForm.resx">
+      <DependentUpon>AddAuthorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddBookForm.resx">
       <DependentUpon>AddBookForm.cs</DependentUpon>
     </EmbeddedResource>
